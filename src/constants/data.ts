@@ -1,0 +1,1008 @@
+export const properties = [
+  {
+    id: 1,
+    title: "Luxury Villa with Riverside View",
+    price: "$415,000",
+    location: "Akosombo",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "350 sq m",
+    image: "https://anaarkutu.com/wp-content/uploads/2022/04/DJI_0410-1.jpg",
+    status: "For Sale",
+    featured: true
+  },
+  {
+    id: 2,
+    title: "Elegant Family Home",
+    price: "$390,000",
+    location: "Adjiringanor, East Legon, Accra",
+    bedrooms: 5,
+    bathrooms: 6,
+    area: "275 sq m",
+    image: "https://images.prop24.com/359210571/Ensure1280x720",
+    status: "For Sale",
+    featured: true
+  },
+  {
+    id: 3,
+    title: "Luxurious Island Property",
+    price: "$2,550,000",
+    location: "Axim",
+    bedrooms: 8,
+    bathrooms: 9,
+    area: "632 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/island%20property.jpg",
+    status: "For Sale",
+    featured: true
+  },
+  {
+    id: 4,
+    title: "Affordable Comfort ",
+    price: "$226,000",
+    location: "Adenta, Accra",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "288 sq m",
+    image: "https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 5,
+    title: "Contemporary Condo",
+    price: "$1,890/month",
+    location: "Lakeside Estate, Accra",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "430 sq m",
+    image: "https://www.edenoasisrealty.com/wp-content/uploads/2024/12/DJI_0533.jpg",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 6,
+    title: "Budget Bliss Home",
+    price: "$165,000",
+    location: "Abuakwa, Kumasi",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "340 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s3.jpg",
+    status: "For Sale",
+    featured: true
+  },
+  {
+    id: 7,
+    title: "Delacoas Villa",
+    price: "$4,350/month",
+    location: "Oyibi, Accra",
+    bedrooms: 6,
+    bathrooms: 7,
+    area: "515 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/k1.jfif",
+    status: "For Rent",
+    featured: true
+  },
+  {
+    id: 8,
+    title: "Luxury Penthouse Suite",
+    price: "$325,000",
+    location: "East Legon Hills, Accra",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "315 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/l1.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 9,
+    title: "Fully Furnished Harmony Home",
+    price: "$235,000",
+    location: "Ejisu, Kumasi",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "285 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/n1.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 10,
+    title: "Luxe Loft Living",
+    price: "$385,000",
+    location: "North Legon, Accra",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "305 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/o1.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 11,
+    title: "Sunset Crest Manor",
+    price: "$1,200/month",
+    location: "Ogbodjo, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "480 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s8.jfif",
+    status: "For Rent",
+    featured: true
+  },
+  {
+    id: 12,
+    title: "Kofymens Apartments",
+    price: "$800/month",
+    location: "Bohyen, Kumasi",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "360 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s4.jpg",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 13,
+    title: "K.K. Beachfront Executive Lodge",
+    price: "$1,900/month",
+    location: "Prampram, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "330 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s7.jpg",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 14,
+    title: "Brick & Budget",
+    price: "$166,000",
+    location: "Frafraha, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "225 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t16.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 15,
+    title: "Cedar Grove Court",
+    price: "$182,000",
+    location: "Avatime Amedzofe, Ho",
+    bedrooms: 4,
+    bathrooms: 5,
+    area: "305 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s2.jpg",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 16,
+    title: "Fully Furnished Executive Enclave",
+    price: "$1,650/month",
+    location: "Essikado, Takoradi",
+    bedrooms: 2,
+    bathrooms: 3,
+    area: "500 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t3.jfif",
+    status: "For Rent",
+    featured: true
+  },
+  {
+    id: 17,
+    title: "Cozy Comfort",
+    price: "$175,000",
+    location: "Anaji, Takoradi",
+    bedrooms: 2,
+    bathrooms: 3,
+    area: "280 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u11.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 18,
+    title: "Eban Gardens Home",
+    price: "$1,380/month",
+    location: "Effiduase, Koforidua",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "320 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t8.jfif",
+    status: "For Rent",
+    featured: true
+  },
+  {
+    id: 19,
+    title: "The Orchid Nest",
+    price: "$2,300/month",
+    location: "Tema Community 25, Accra",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "360 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t9.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 20,
+    title: "Budget Family Home",
+    price: "$175,000",
+    location: "Oduom, Kumasi",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "275 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t6.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 21,
+    title: "Hilltop Escape Apartments",
+    price: "$2,100/month",
+    location: "Aburi",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "460 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t2.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 22,
+    title: "Timeless Family Classic",
+    price: "$265,000",
+    location: "New Achimota, Accra",
+    bedrooms: 4,
+    bathrooms: 5,
+    area: "230 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s5.jpg",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 23,
+    title: "Ayaneese Serenity Villa",
+    price: "$580,000",
+    location: "Airport Residential, Accra",
+    bedrooms: 5,
+    bathrooms: 6,
+    area: "420 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t1.jfif",
+    status: "For Sale",
+    featured: true
+  },
+  {
+    id: 24,
+    title: "Seaside Terraced Duplexes with BQ",
+    price: "$1,420/month",
+    location: "Winneba",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "410 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t19.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 25,
+    title: "The Modal Townhouse",
+    price: "$185,000",
+    location: "Kwabenya, Accra",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "380 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t7.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 26,
+    title: "The Platinum Townhouse",
+    price: "$3,250/month",
+    location: "Ridge, Accra",
+    bedrooms: 5,
+    bathrooms: 6,
+    area: "480 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t4.jfif",
+    status: "For Rent",
+    featured: true
+  },
+  {
+    id: 27,
+    title: "Modern Minimalist Home",
+    price: "$488,000",
+    location: "Obuasi",
+    bedrooms: 6,
+    bathrooms: 6,
+    area: "360 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t13.jfif",
+    status: "For Sale",
+    featured: true
+  },
+  {
+    id: 28,
+    title: "Maple Court Studio Flat",
+    price: "$800/month",
+    location: "Kotei, Kumasi",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "180 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t11.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 29,
+    title: "Urban Charm, Easy Price",
+    price: "$287,000",
+    location: "Tse Addo, Accra",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "285 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t12.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 30,
+    title: "Hill Breeze Executive Lodge",
+    price: "$550/month",
+    location: "Apowa, Takoradi",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "370 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t17.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 31,
+    title: "La Vida Executive Suites",
+    price: "$2,300/month",
+    location: "Pokuase, Accra",
+    bedrooms: 3,
+    bathrooms: 4,
+    area: "515 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t24.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 32,
+    title: "Starter Smart Home",
+    price: "$168,000",
+    location: "Kwahu-Mpraeso",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "210 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t22.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 33,
+    title: "4-Bedroom Semidetached Duplex with BQ",
+    price: "$280,000",
+    location: "Oyoko, Koforidua",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "275 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t20.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 34,
+    title: "Mistwood Lodge",
+    price: "$2,590/month",
+    location: "Afienya",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "520 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t21.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 35,
+    title: "Prestige Grove Apartments",
+    price: "$730/month",
+    location: "Dodowa, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "470 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t15.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 36,
+    title: "Cozy Holiday Home",
+    price: "$1,590/month",
+    location: "Patasi, Kumasi",
+    bedrooms: 5,
+    bathrooms: 5,
+    area: "270 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t18.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 37,
+    title: "Affordable Comfort",
+    price: "$215,000",
+    location: "Dzorwulu, Accra",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "230 sq m",
+    image: "https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 38,
+    title: "Emerald Crest Living",
+    price: "$3,550/month",
+    location: "East Airport, Accra",
+    bedrooms: 5,
+    bathrooms: 6,
+    area: "385 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t23.jfif",
+    status: "For Rent",
+    featured: true
+  },
+  {
+    id: 39,
+    title: "Luxurious 3 Bedroom House",
+    price: "$255,000",
+    location: "Ogbodjo, Accra",
+    bedrooms: 3,
+    bathrooms: 2,
+    area: "270 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u1.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 40,
+    title: "Legacy Twin Homes",
+    price: "$1,150/month",
+    location: "Pokuase, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "575 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t26.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 41,
+    title: "Budget Bliss Home",
+    price: "$355,000",
+    location: "Abuakwa, Kumasi",
+    bedrooms: 4,
+    bathrooms: 5,
+    area: "450 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u3.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 42,
+    title: "Cozy 4 Bedroom House",
+    price: "$318,000",
+    location: "New Achimota, Accra",
+    bedrooms: 4,
+    bathrooms: 3,
+    area: "235 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u8.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 43,
+    title: "The Logan Park Villa",
+    price: "$880/month",
+    location: "Asokore Mampong, Kumasi",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "340 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u5.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 44,
+    title: "Safari Ridge Executive Home",
+    price: "$420,000",
+    location: "Peduase",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "325 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u6.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 45,
+    title: "Oakline Urban Suites",
+    price: "$2,250/month",
+    location: "Ashaley Botwe, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "380 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t27.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 46,
+    title: "Urban 3 Bedroom House",
+    price: "$275,000",
+    location: "Oyibi, Accra",
+    bedrooms: 3,
+    bathrooms: 3,
+    area: "290 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u4.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 47,
+    title: "Savvy 2 Bedroom Airbnb",
+    price: "$225/night",
+    location: "Lashibi, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "145 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u10.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 48,
+    title: "Calm Meets Class",
+    price: "$315,000",
+    location: "Akosombo",
+    bedrooms: 4,
+    bathrooms: 4,
+    area: "260 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u12.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+    id: 49,
+    title: "Lakeside Cozy Airbnb Retreat",
+    price: "$250/night",
+    location: "Lakeside Estate, Accra",
+    bedrooms: 2,
+    bathrooms: 3,
+    area: "75 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u9.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 50,
+    title: "Golden Horizon Homes",
+    price: "$220/month",
+    location: "Pobiman, Accra",
+    bedrooms: 1,
+    bathrooms: 1,
+    area: "410 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u2.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 51,
+    title: "Value Gate Airbnb",
+    price: "$235/night",
+    location: "Adenta, Accra",
+    bedrooms: 2,
+    bathrooms: 2,
+    area: "200 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t14.jfif",
+    status: "For Rent",
+    featured: false
+  },
+  {
+    id: 52,
+    title: "Family Grove",
+    price: "$233,000",
+    location: "Tarkwa",
+    bedrooms: 4,
+    bathrooms: 3,
+    area: "310 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t5.jfif",
+    status: "For Sale",
+    featured: false
+  },
+  {
+  id: 53,
+  title: "Akyem Hideaway",
+  price: "$290/night",
+  location: "Akim Oda",
+  bedrooms: 3,
+  bathrooms: 2,
+  area: "260 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u7.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 54,
+  title: "Beliz Airbnb Studio",
+  price: "$115/night",
+  location: "Tesano, Accra",
+  bedrooms: 1,
+  bathrooms: 1,
+  area: "125 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s1.jpg",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 55,
+  title: "Ocean Breeze Holiday Home",
+  price: "$2,520/month",
+  location: "Ada Foah",
+  bedrooms: 4,
+  bathrooms: 4,
+  area: "315 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u13.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 56,
+  title: "Prime Executive Office Suite",
+  price: "$8,800/month",
+  location: "Dzorwulu, Accra",
+  washrooms: 12,
+  area: "465 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v2.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 57,
+  title: "80 Square Meter Office Space ",
+  price: "$520/month",
+  location: "Teshie-Nungua, Accra",
+  washrooms: 1,
+  area: "80 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v9.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 58,
+  title: "Open Plan Office Plaza",
+  price: "$3,300/month",
+  location: "Ridge, Accra",
+  washrooms: 5,
+  area: "250 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v3.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 59,
+  title: "Newly Built Commercial Office Space",
+  price: "$850/month",
+  location: "Westlands, Accra",
+  washrooms: 1,
+  area: "85 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v5.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 60,
+  title: "120 Square Meter Office Unit",
+  price: "$800/month",
+  location: "Kwadaso, Kumasi",
+  washrooms: 2,
+  area: "120 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w1.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 61,
+  title: "Agbi Tower Top-Floor Space",
+  price: "$3,200/month",
+  location: "Spintex, Accra",
+  washrooms: 4,
+  area: "415 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w6.jpg",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 62,
+  title: "Office Space To Let",
+  price: "$620/month",
+  location: "Madina, Accra",
+  washrooms: 1,
+  area: "70 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v8.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 63,
+  title: "Corporate Office FLoors For Rent",
+  price: "$2,100/month",
+  location: "Labone, Accra",
+  washrooms: 6,
+  area: "300 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v1.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 64,
+  title: "Private Office Space",
+  price: "$180/month",
+  location: "Ashaley Botwe, Accra",
+  washrooms: 1,
+  area: "45 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w4.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 65,
+  title: "Two-Room Office Unit",
+  price: "$780/month",
+  location: "Baatsona, Accra",
+  washrooms: 1,
+  area: "140 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w3.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 66,
+  title: "Ground Floor Office Space",
+  price: "$1,300/month",
+  location: "Dansoman, Accra",
+  washrooms: 2,
+  area: "165 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w2.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 67,
+  title: "Compact Office Room",
+  price: "$430/month",
+  location: "Agbogba, Accra",
+  washrooms: 1,
+  area: "65 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v7.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 68,
+  title: "Modern Office Space To Let",
+  price: "$755/month",
+  location: "Abelemkpe, Accra",
+  washrooms: 1,
+  area: "70 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v4.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 69,
+  title: "Semi-Furnished Office Space Near Mall",
+  price: "$1,850/month",
+  location: "Shiashie, Accra",
+  washrooms: 2,
+  area: "205 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w9.jpg",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 70,
+  title: "Prime Located Commercial Office",
+  price: "$1,100/month",
+  location: "Achimota, Accra",
+  washrooms: 2,
+  area: "130 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w5.jfif",
+  status: "For Rent",
+  featured: false
+},
+{
+  id: 71,
+  title: "Simple Corporate Office Space",
+  price: "$270/month",
+  location: "Tech-Junction, Kumasi",
+  washrooms: 1,
+  area: "85 sq m",
+  image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v6.jfif",
+  status: "For Rent",
+  featured: false
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Sarah Adaklu",
+    role: "Happy Homeowner",
+    image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review-1.jpg",
+    text: "Eddie Inc. made our dream home a reality. Their expertise and dedication throughout the entire process was exceptional, not forgetting Ella's sense of humor!"
+  },
+  {
+    id: 2,
+    name: "Ohene Wiredu",
+    role: "Property Investor",
+    image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review%202.jpeg",
+    text: "Just two words; professional and reliable. I had doubts at first, but Cobbs, together with the team, helped me find the perfect investment properties after returning to Ghana a few months ago."
+  },
+  {
+    id: 3,
+    name: "Jessica Allotey",
+    role: "First-time Buyer",
+    image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review%203.jpg",
+    text: "As a first-time buyer, interestingly , I wasn't nervous, and the team at Eddie Inc. repaid my faith in them; they guided me through every step with patience and care."
+  },
+  {
+    id: 4,
+    name: "Youssef Amad",
+    role: "Luxury Home Seller",
+    image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review%204.jpg",
+    text: "I rarely put my business in the hands of agents but they sold our luxury home in record time and at a price that exceeded our expectations. Truly impressive work."                                               
+  }
+];
+
+export const agents = [
+  {
+    id: 1,
+    name: "Lawrence Cobbinah",
+    title: "Senior Real Estate Agent",
+    experience: "13 Years",
+    specialties: ["Luxury Homes", "Investment Properties", "Land Broker"],
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/agent%204.jpg",
+    phone: "+1 (555) 987 6522/ +233 (0) 504 923 755",
+    email: "lawcobbinah600@eddieinc.com",
+    listings: 19
+  },
+  {
+    id: 2,
+    name: "Raphaella Deladem Adzei",
+    title: "Residential Property Expert",
+    experience: "7 Years",
+    specialties: ["Family Homes", "Apartments", "First-time Buyers"],
+    image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%203.jpg",
+    phone: "+44 (0)7123 456 789/ +233 (0) 204 313 728",
+    email: "phaella55@eddieinc.com",
+    listings: 27
+  },
+  {
+    id: 3,
+    name: "Robert Finney-Smith",
+    title: "Commercial Real Estate Specialist",
+    experience: "10 Years",
+    specialties: ["Commercial", "Industrial",],
+    image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%202.jpg",
+    phone: "+1 (555) 234 5678/ +233 (0) 548 088 000",
+    email: "finneysmith005@eddieinc.com",
+    listings: 7
+  },
+  {
+    id: 4,
+    name: "Amanda Foster",
+    title: "Short Term Rental Expert",
+    experience: "4 Years",
+    specialties: ["Airbnbs", "Vacation Rentals"],
+    image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%201.jpg",
+    phone: "+233 (0) 594 400 878",
+    email: "amandafoster808@eddieinc.com",
+    listings: 9
+  },
+  {
+    id: 5,
+    name: "Wilberforce K. Peprah",
+    title: "Land Broker",
+    experience: "6 Years",
+    specialties: ["Commercial", "Land Broker"],
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/agent%205.jpg",
+    phone: "+233 (0) 26 144 374/ +233 (0) 557 795 353",
+    email: "kwilbs211@eddieinc.com",
+    listings: 9
+  }
+];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Market Trends: What to Expect in 2024",
+    excerpt: "Discover the latest real estate market trends and predictions for the upcoming year.",
+    image: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=600",
+    date: "December 15, 2023",
+    category: "Market Insights",
+    readTime: "5 min read"
+  },
+  {
+    id: 2,
+    title: "First-Time Buyer's Complete Guide",
+    excerpt: "Everything you need to know about buying your first home, from financing to closing.",
+    image: "https://www.globalpropertiesafrica.com/propertygallery/74648939243eb68f51eeef2a9bb4e4f3250f2a0fc.jpg",
+    date: "December 10, 2023",
+    category: "Buying Tips",
+    readTime: "8 min read"
+  },
+  {
+    id: 3,
+    title: "Investment Properties: Maximizing ROI",
+    excerpt: "Learn strategies for selecting and managing investment properties for optimal returns.",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/spintex%20luxury%20property.jpg",
+    date: "December 5, 2023",
+    category: "Investment",
+    readTime: "6 min read"
+  }
+];
+
+export const propertyCategories = [
+  {
+    id: 1,
+    name: "Apartments",
+    icon: "Building2",
+    description: "Modern apartments in prime locations",
+    count: 17
+  },
+  {
+    id: 2,
+    name: "Houses",
+    icon: "Home",
+    description: "Family homes and luxury estates",
+    count: 29
+  },
+  {
+    id: 3,
+    name: "Commercial",
+    icon: "Building",
+    description: "Office spaces and retail properties",
+    count: 16
+  },
+  {
+    id: 4,
+    name: "Lands",
+    icon: "MapPin",
+    description: "Development plots and agricultural land",
+    count: 0
+  },
+  {
+    id: 5,
+    name: "Short Stay",
+    icon: "Calendar",
+    description: "Vacation rentals and short-term stays",
+    count: 9
+  }
+];
