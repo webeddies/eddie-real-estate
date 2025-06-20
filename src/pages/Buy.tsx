@@ -1,5 +1,7 @@
 import React from 'react';
 import { CheckCircle, Search, Eye, FileCheck, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 const Buy: React.FC = () => {
   const steps = [
@@ -34,7 +36,7 @@ const Buy: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-royal-blue to-blue-700 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div 
+          <div
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage: 'url(https://www.globalpropertiesafrica.com/propertygallery/74648939243eb68f51eeef2a9bb4e4f3250f2a0fc.jpg)'
@@ -167,12 +169,16 @@ const Buy: React.FC = () => {
             Let our experienced team guide you through the entire buying process and help you secure the perfect property in Ghana.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-royal-blue text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-              Request Consultation
-            </button>
-            <button className="border-2 border-royal-blue text-royal-blue px-8 py-3 rounded-lg hover:bg-royal-blue hover:text-white transition-colors font-semibold">
-              Browse Properties
-            </button>
+            <Link to="/contact#contact-form" className="w-full sm:w-auto">
+              <button className="w-full sm:w-auto border border-royal-blue text-royal-blue px-6 py-3 rounded-lg hover:bg-royal-blue hover:text-white transition-colors text-sm sm:text-base">
+                Request Consultation
+              </button>
+            </Link>
+            <Link to="/properties">
+              <button className="border-2 border-royal-blue text-royal-blue px-8 py-2.5 rounded-lg hover:bg-royal-blue hover:text-white transition-colors font-semibold">
+                Browse Properties
+              </button>
+            </Link>
           </div>
         </div>
       </section>

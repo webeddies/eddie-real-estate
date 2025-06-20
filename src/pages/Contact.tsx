@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from 'lucide-react';
 
 const Contact: React.FC = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -9,6 +11,21 @@ const Contact: React.FC = () => {
     subject: '',
     message: ''
   });
+  useEffect(() => {
+  if (location.hash === '#contact-form') {
+    // Delay scrolling to ensure the element has rendered
+    const timeout = setTimeout(() => {
+      const el = document.getElementById('contact-form');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // wait 100ms
+
+    return () => clearTimeout(timeout); // clean up
+  }
+}, [location]);
+
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
@@ -65,7 +82,7 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
+            <div id="contact-form" className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

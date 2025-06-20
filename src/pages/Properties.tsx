@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Filter, Grid, List, SlidersHorizontal } from 'lucide-react';
 import PropertyCard from '../components/ui/PropertyCard';
 import { properties } from '../constants/data';
+import { useLocation } from 'react-router-dom';
 
 const Properties: React.FC = () => {
   const [filteredProperties, setFilteredProperties] = useState(properties);
@@ -17,32 +18,78 @@ const Properties: React.FC = () => {
     location: ''
   });
 
+  const locationHook = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(locationHook.search);
+
+    const searchFilters = {
+      location: params.get('location') || '',
+      propertyType: params.get('propertyType') || '',
+      bedrooms: params.get('bedrooms') || '',
+      priceMin: '',
+      priceMax: '',
+      status: '',
+      bathrooms: ''
+    };
+
+    const priceRange = params.get('priceRange');
+    if (priceRange) {
+      const [min, max] = priceRange.split('-');
+      searchFilters.priceMin = min;
+      searchFilters.priceMax = max || '';
+    }
+
+    setFilters(searchFilters);
+    handleFilterChangeBatch(searchFilters);
+  }, [locationHook.search]);
+
   const handleFilterChange = (key: string, value: string) => {
-    const newFilters = { ...filters, [key]: value };
-    setFilters(newFilters);
-    
-    // Apply filters
+    const updatedFilters = { ...filters, [key]: value };
+    setFilters(updatedFilters);
+    handleFilterChangeBatch(updatedFilters);
+  };
+
+
+  const handleFilterChangeBatch = (updatedFilters: typeof filters) => {
+    const priceToNumber = (price: string) =>
+      parseInt(price.replace(/[^0-9]/g, ''), 10) || 0;
+
     let filtered = properties;
-    
-    if (newFilters.status) {
-      filtered = filtered.filter(p => p.status === newFilters.status);
+
+    if (updatedFilters.status) {
+      filtered = filtered.filter(p => p.status === updatedFilters.status);
     }
-    
-    if (newFilters.bedrooms) {
-      filtered = filtered.filter(p => p.bedrooms >= parseInt(newFilters.bedrooms));
+
+    if (updatedFilters.bedrooms) {
+      filtered = filtered.filter(p => p.bedrooms >= parseInt(updatedFilters.bedrooms));
     }
-    
-    if (newFilters.location) {
-      filtered = filtered.filter(p => 
-        p.location.toLowerCase().includes(newFilters.location.toLowerCase())
-      );
+
+    if (updatedFilters.bathrooms) {
+      filtered = filtered.filter(p => p.bathrooms >= parseInt(updatedFilters.bathrooms));
     }
-    
+
+    if (updatedFilters.location) {
+      const loc = updatedFilters.location.toLowerCase();
+      filtered = filtered.filter(p => p.location.toLowerCase().includes(loc));
+    }
+
+    const min = updatedFilters.priceMin ? parseInt(updatedFilters.priceMin) : 0;
+    const max = updatedFilters.priceMax ? parseInt(updatedFilters.priceMax) : Infinity;
+    filtered = filtered.filter(p => {
+      const price = priceToNumber(p.price);
+      return price >= min && price <= max;
+    });
+
+    if (updatedFilters.propertyType) {
+      filtered = filtered.filter(p => p.propertyType === updatedFilters.propertyType);
+    }
+
     setFilteredProperties(filtered);
   };
 
   const clearFilters = () => {
-    setFilters({
+    const reset = {
       status: '',
       priceMin: '',
       priceMax: '',
@@ -50,7 +97,8 @@ const Properties: React.FC = () => {
       bathrooms: '',
       propertyType: '',
       location: ''
-    });
+    };
+    setFilters(reset);
     setFilteredProperties(properties);
   };
 
@@ -93,6 +141,7 @@ const Properties: React.FC = () => {
         </div>
       </div>
 
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 py-8 flex gap-8">
         {/* Filters Sidebar */}
         <div className={`${showFilters ? 'block' : 'hidden'} lg:block w-full lg:w-80 flex-shrink-0`}>
@@ -107,98 +156,113 @@ const Properties: React.FC = () => {
               </button>
             </div>
 
-            <div className="space-y-6">
-              {/* Status Filter */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Status</label>
-                <select
-                  value={filters.status}
-                  onChange={(e) => handleFilterChange('status', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-                >
-                  <option value="">All</option>
-                  <option value="For Sale">For Sale</option>
-                  <option value="For Rent">For Rent</option>
-                </select>
-              </div>
+            {/* Status */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Status</label>
+              <select
+                value={filters.status}
+                onChange={(e) => handleFilterChange('status', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+              >
+                <option value="">All</option>
+                <option value="For Sale">For Sale</option>
+                <option value="For Rent">For Rent</option>
+              </select>
+            </div>
 
-              {/* Location Filter */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+            {/* Location */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
+              <input
+                type="text"
+                placeholder="Enter location"
+                value={filters.location}
+                onChange={(e) => handleFilterChange('location', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+              />
+            </div>
+
+            {/* Price Range */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
+              <div className="grid grid-cols-2 gap-2">
                 <input
-                  type="text"
-                  placeholder="Enter location"
-                  value={filters.location}
-                  onChange={(e) => handleFilterChange('location', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+                  type="number"
+                  placeholder="Min"
+                  value={filters.priceMin}
+                  onChange={(e) => handleFilterChange('priceMin', e.target.value)}
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+                />
+                <input
+                  type="number"
+                  placeholder="Max"
+                  value={filters.priceMax}
+                  onChange={(e) => handleFilterChange('priceMax', e.target.value)}
+                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
                 />
               </div>
-
-              {/* Price Range */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
-                <div className="grid grid-cols-2 gap-2">
-                  <input
-                    type="number"
-                    placeholder="Min Price"
-                    value={filters.priceMin}
-                    onChange={(e) => handleFilterChange('priceMin', e.target.value)}
-                    className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-                  />
-                  <input
-                    type="number"
-                    placeholder="Max Price"
-                    value={filters.priceMax}
-                    onChange={(e) => handleFilterChange('priceMax', e.target.value)}
-                    className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-                  />
-                </div>
-              </div>
-
-              {/* Bedrooms */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Bedrooms</label>
-                <select
-                  value={filters.bedrooms}
-                  onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-                >
-                  <option value="">Any</option>
-                  <option value="1">1+ Bedrooms</option>
-                  <option value="2">2+ Bedrooms</option>
-                  <option value="3">3+ Bedrooms</option>
-                  <option value="4">4+ Bedrooms</option>
-                  <option value="5">5+ Bedrooms</option>
-                </select>
-              </div>
-
-              {/* Bathrooms */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Bathrooms</label>
-                <select
-                  value={filters.bathrooms}
-                  onChange={(e) => handleFilterChange('bathrooms', e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-                >
-                  <option value="">Any</option>
-                  <option value="1">1+ Bathrooms</option>
-                  <option value="2">2+ Bathrooms</option>
-                  <option value="3">3+ Bathrooms</option>
-                  <option value="4">4+ Bathrooms</option>
-                </select>
-              </div>
             </div>
+
+            {/* Property Type */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Property Type</label>
+              <select
+                value={filters.propertyType}
+                onChange={(e) => handleFilterChange('propertyType', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+              >
+                <option value="">All</option>
+                <option value="Luxury Homes">Luxury Homes</option>
+                <option value="Private Homes">Private Homes</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Short Stays">Short Stays</option>
+              </select>
+            </div>
+
+            {/* Bedrooms */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Bedrooms</label>
+              <select
+                value={filters.bedrooms}
+                onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+              >
+                <option value="">Any</option>
+                <option value="1">1+ Bedrooms</option>
+                <option value="2">2+ Bedrooms</option>
+                <option value="3">3+ Bedrooms</option>
+                <option value="4">4+ Bedrooms</option>
+                <option value="5">5+ Bedrooms</option>
+              </select>
+            </div>
+
+            {/* Bathrooms (optional, you had it before) */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Bathrooms</label>
+              <select
+                value={filters.bathrooms}
+                onChange={(e) => handleFilterChange('bathrooms', e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+              >
+                <option value="">Any</option>
+                <option value="1">1+ Baths</option>
+                <option value="2">2+ Baths</option>
+                <option value="3">3+ Baths</option>
+                <option value="4">4+ Baths</option>
+              </select>
+            </div>
+            
           </div>
         </div>
 
-        {/* Properties Grid/List */}
+        {/* Property Listings */}
         <div className="flex-1">
           {filteredProperties.length > 0 ? (
-            <div className={`grid gap-6 ${
-              viewMode === 'grid' 
-                ? 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3' 
-                : 'grid-cols-1'
-            }`}>
+            <div className={`grid gap-6 ${viewMode === 'grid'
+              ? 'grid-cols-1 md:grid-cols-2 xl:grid-cols-3'
+              : 'grid-cols-1'
+              }`}>
               {filteredProperties.map((property) => (
                 <PropertyCard key={property.id} {...property} />
               ))}

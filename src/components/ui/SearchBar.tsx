@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Search, MapPin, Home, DollarSign, Bed } from 'lucide-react';
 
@@ -9,13 +10,21 @@ const SearchBar: React.FC = () => {
     bedrooms: ''
   });
 
+  const navigate = useNavigate();
+
   const handleInputChange = (field: string, value: string) => {
     setSearchData(prev => ({ ...prev, [field]: value }));
   };
 
   const handleSearch = () => {
-    console.log('Search data:', searchData);
-    // Handle search logic here
+    const queryParams = new URLSearchParams();
+
+    if (searchData.location) queryParams.append('location', searchData.location);
+    if (searchData.propertyType) queryParams.append('propertyType', searchData.propertyType);
+    if (searchData.priceRange) queryParams.append('priceRange', searchData.priceRange);
+    if (searchData.bedrooms) queryParams.append('bedrooms', searchData.bedrooms);
+
+    navigate(`/properties?${queryParams.toString()}`);
   };
 
   return (
@@ -46,15 +55,13 @@ const SearchBar: React.FC = () => {
               value={searchData.propertyType}
               onChange={(e) => handleInputChange('propertyType', e.target.value)}
             >
-              <option value="" disabled selected hidden></option>
-              <option value="">All Types</option>
-              <option value="luxury homes">Luxury Homes</option>
-              <option value="private homes">Private Homes</option>
-              <option value="waterfront">Waterfront</option>
-              <option value="gated communities">Gated Communities</option>
-              <option value="short stays">Short Stays</option>
+              <option value="" hidden>Select Type</option>
+              <option value="Luxury Homes">Luxury Homes</option>
+              <option value="Private Homes">Private Homes</option>
+              <option value="Apartments">Apartments</option>
+              <option value="Commercial">Commercial</option>
+              <option value="Short Stays">Short Stays</option>
             </select>
-
           </div>
         </div>
 
@@ -68,15 +75,13 @@ const SearchBar: React.FC = () => {
               value={searchData.priceRange}
               onChange={(e) => handleInputChange('priceRange', e.target.value)}
             >
-              <option value="" disabled selected hidden></option>
-              <option value="">Any Price</option>
-              <option value="0-500000">$0 - $250K</option>
-              <option value="0-500000">$250K - $500K</option>
+              <option value="" hidden>Select Budget</option>
+              <option value="0-250000">Up to $250K</option>
+              <option value="250000-500000">$250K - $500K</option>
               <option value="500000-1000000">$500K - $1M</option>
               <option value="1000000-2000000">$1M - $2M</option>
-              <option value="2000000+">$2M+</option>
+              <option value="2000000-99999999">$2M+</option>
             </select>
-
           </div>
         </div>
 
@@ -90,15 +95,13 @@ const SearchBar: React.FC = () => {
               value={searchData.bedrooms}
               onChange={(e) => handleInputChange('bedrooms', e.target.value)}
             >
-              <option value="" disabled selected hidden></option>
-              <option value="">Any</option>
-              <option value="1">1+ Bed</option>
+              <option value="" hidden>Select</option>
+              <option value="1">1+ Beds</option>
               <option value="2">2+ Beds</option>
               <option value="3">3+ Beds</option>
               <option value="4">4+ Beds</option>
               <option value="5">5+ Beds</option>
             </select>
-
           </div>
         </div>
 

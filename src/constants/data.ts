@@ -9,6 +9,7 @@ export const properties = [
     area: "350 sq m",
     image: "https://anaarkutu.com/wp-content/uploads/2022/04/DJI_0410-1.jpg",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
@@ -21,6 +22,7 @@ export const properties = [
     area: "275 sq m",
     image: "https://images.prop24.com/359210571/Ensure1280x720",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: true
   },
   {
@@ -33,18 +35,20 @@ export const properties = [
     area: "632 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/island%20property.jpg",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
     id: 4,
     title: "Affordable Comfort ",
-    price: "$226,000",
+    price: "$286,000",
     location: "Adenta, Accra",
     bedrooms: 4,
     bathrooms: 4,
     area: "288 sq m",
     image: "https://images.pexels.com/photos/206172/pexels-photo-206172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -57,6 +61,7 @@ export const properties = [
     area: "430 sq m",
     image: "https://www.edenoasisrealty.com/wp-content/uploads/2024/12/DJI_0533.jpg",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -69,6 +74,7 @@ export const properties = [
     area: "340 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s3.jpg",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: true
   },
   {
@@ -81,6 +87,7 @@ export const properties = [
     area: "515 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/k1.jfif",
     status: "For Rent",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
@@ -93,6 +100,7 @@ export const properties = [
     area: "315 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/l1.jfif",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: false
   },
   {
@@ -105,6 +113,7 @@ export const properties = [
     area: "285 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/n1.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -117,6 +126,7 @@ export const properties = [
     area: "305 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/o1.jfif",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: false
   },
   {
@@ -129,6 +139,7 @@ export const properties = [
     area: "480 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s8.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: true
   },
   {
@@ -141,6 +152,7 @@ export const properties = [
     area: "360 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s4.jpg",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -153,6 +165,7 @@ export const properties = [
     area: "330 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s7.jpg",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -165,6 +178,7 @@ export const properties = [
     area: "225 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t16.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -177,6 +191,7 @@ export const properties = [
     area: "305 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s2.jpg",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -189,6 +204,7 @@ export const properties = [
     area: "500 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t3.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: true
   },
   {
@@ -201,6 +217,7 @@ export const properties = [
     area: "280 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u11.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -213,6 +230,7 @@ export const properties = [
     area: "320 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t8.jfif",
     status: "For Rent",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
@@ -225,6 +243,7 @@ export const properties = [
     area: "360 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t9.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -237,6 +256,7 @@ export const properties = [
     area: "275 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t6.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -249,6 +269,7 @@ export const properties = [
     area: "460 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t2.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -261,6 +282,7 @@ export const properties = [
     area: "230 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s5.jpg",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -273,6 +295,7 @@ export const properties = [
     area: "420 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t1.jfif",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
@@ -285,6 +308,7 @@ export const properties = [
     area: "410 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t19.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -297,6 +321,7 @@ export const properties = [
     area: "380 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t7.jfif",
     status: "For Sale",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -309,30 +334,33 @@ export const properties = [
     area: "480 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t4.jfif",
     status: "For Rent",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
     id: 27,
     title: "Modern Minimalist Home",
-    price: "$488,000",
+    price: "$438,000",
     location: "Obuasi",
     bedrooms: 6,
     bathrooms: 6,
     area: "360 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t13.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: true
   },
   {
     id: 28,
     title: "Maple Court Studio Flat",
-    price: "$800/month",
+    price: "$215/night",
     location: "Kotei, Kumasi",
-    bedrooms: 2,
-    bathrooms: 2,
+    bedrooms: 3,
+    bathrooms: 3,
     area: "180 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t11.jfif",
     status: "For Rent",
+    propertyType: "Short Stays",
     featured: false
   },
   {
@@ -345,6 +373,7 @@ export const properties = [
     area: "285 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t12.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -357,6 +386,7 @@ export const properties = [
     area: "370 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t17.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -369,6 +399,7 @@ export const properties = [
     area: "515 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t24.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -381,6 +412,7 @@ export const properties = [
     area: "210 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t22.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -393,6 +425,7 @@ export const properties = [
     area: "275 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t20.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -405,6 +438,7 @@ export const properties = [
     area: "520 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t21.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -417,6 +451,7 @@ export const properties = [
     area: "470 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t15.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -429,6 +464,7 @@ export const properties = [
     area: "270 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t18.jfif",
     status: "For Rent",
+    propertyType: "Short Stays",
     featured: false
   },
   {
@@ -441,6 +477,7 @@ export const properties = [
     area: "230 sq m",
     image: "https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -453,18 +490,20 @@ export const properties = [
     area: "385 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t23.jfif",
     status: "For Rent",
+    propertyType: "Luxury Homes",
     featured: true
   },
   {
     id: 39,
     title: "Luxurious 3 Bedroom House",
-    price: "$255,000",
+    price: "$275,000",
     location: "Ogbodjo, Accra",
     bedrooms: 3,
     bathrooms: 2,
     area: "270 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u1.jfif",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: false
   },
   {
@@ -477,6 +516,7 @@ export const properties = [
     area: "575 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t26.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -489,6 +529,7 @@ export const properties = [
     area: "450 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u3.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -501,6 +542,7 @@ export const properties = [
     area: "235 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u8.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -513,6 +555,7 @@ export const properties = [
     area: "340 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u5.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -525,6 +568,7 @@ export const properties = [
     area: "325 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u6.jfif",
     status: "For Sale",
+    propertyType: "Luxury Homes",
     featured: false
   },
   {
@@ -537,6 +581,7 @@ export const properties = [
     area: "380 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t27.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -549,6 +594,7 @@ export const properties = [
     area: "290 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u4.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -561,6 +607,7 @@ export const properties = [
     area: "145 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u10.jfif",
     status: "For Rent",
+    propertyType: "Short Stays",
     featured: false
   },
   {
@@ -573,6 +620,7 @@ export const properties = [
     area: "260 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u12.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
@@ -585,6 +633,7 @@ export const properties = [
     area: "75 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u9.jfif",
     status: "For Rent",
+    propertyType: "Short Stays",
     featured: false
   },
   {
@@ -597,6 +646,7 @@ export const properties = [
     area: "410 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u2.jfif",
     status: "For Rent",
+    propertyType: "Apartments",
     featured: false
   },
   {
@@ -609,6 +659,7 @@ export const properties = [
     area: "200 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t14.jfif",
     status: "For Rent",
+    propertyType: "Short Stays",
     featured: false
   },
   {
@@ -621,18 +672,20 @@ export const properties = [
     area: "310 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t5.jfif",
     status: "For Sale",
+    propertyType: "Private Homes",
     featured: false
   },
   {
   id: 53,
   title: "Akyem Hideaway",
-  price: "$290/night",
+  price: "$220/night",
   location: "Akim Oda",
   bedrooms: 3,
   bathrooms: 2,
   area: "260 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u7.jfif",
   status: "For Rent",
+  propertyType: "Short Stays",
   featured: false
 },
 {
@@ -645,6 +698,7 @@ export const properties = [
   area: "125 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s1.jpg",
   status: "For Rent",
+  propertyType: "Short Stays",
   featured: false
 },
 {
@@ -657,6 +711,7 @@ export const properties = [
   area: "315 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u13.jfif",
   status: "For Rent",
+  propertyType: "Short Stays",
   featured: false
 },
 {
@@ -668,6 +723,7 @@ export const properties = [
   area: "465 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v2.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -679,6 +735,7 @@ export const properties = [
   area: "80 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v9.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -690,6 +747,7 @@ export const properties = [
   area: "250 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v3.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -701,6 +759,7 @@ export const properties = [
   area: "85 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v5.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -712,6 +771,7 @@ export const properties = [
   area: "120 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w1.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -723,6 +783,7 @@ export const properties = [
   area: "415 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w6.jpg",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -734,6 +795,7 @@ export const properties = [
   area: "70 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v8.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -745,6 +807,7 @@ export const properties = [
   area: "300 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v1.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -756,6 +819,7 @@ export const properties = [
   area: "45 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w4.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -767,6 +831,7 @@ export const properties = [
   area: "140 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w3.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -778,6 +843,7 @@ export const properties = [
   area: "165 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w2.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -789,6 +855,7 @@ export const properties = [
   area: "65 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v7.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -800,6 +867,7 @@ export const properties = [
   area: "70 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v4.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -811,6 +879,7 @@ export const properties = [
   area: "205 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w9.jpg",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -822,6 +891,7 @@ export const properties = [
   area: "130 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/w5.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 },
 {
@@ -833,6 +903,7 @@ export const properties = [
   area: "85 sq m",
   image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v6.jfif",
   status: "For Rent",
+  propertyType: "Commercial",
   featured: false
 }
 
@@ -962,7 +1033,7 @@ export const blogPosts = [
     id: 3,
     title: "Investment Properties: Maximizing ROI",
     excerpt: "Learn strategies for selecting and managing investment properties for optimal returns.",
-    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/spintex%20luxury%20property.jpg",
+    image: "https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/t12.jfif",
     date: "December 5, 2023",
     category: "Investment",
     readTime: "6 min read"
@@ -1000,9 +1071,9 @@ export const propertyCategories = [
   },
   {
     id: 5,
-    name: "Short Stay",
+    name: "Short Stays",
     icon: "Calendar",
     description: "Vacation rentals and short-term stays",
-    count: 9
+    count: 8
   }
 ];
