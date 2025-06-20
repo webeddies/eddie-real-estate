@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ChevronRight, 
-  Award, 
-  Shield, 
-  Users, 
+import {
+  ChevronRight,
+  Award,
+  Shield,
+  Users,
   TrendingUp,
   Building2,
   Home as HomeIcon,
@@ -24,14 +24,14 @@ const Home: React.FC = () => {
     <div className="font-poppins">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: 'url(https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/island%20property.jpg)'
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-        
+
         <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
             Find Your Dream Home with <span className="text-sky-blue">Eddie Inc.</span>
@@ -39,12 +39,12 @@ const Home: React.FC = () => {
           <p className="text-xl md:text-2xl mb-12 animate-slide-up opacity-90">
             Luxury, Comfort, and Value – Delivered.
           </p>
-          
+
           <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <SearchBar />
           </div>
         </div>
-        
+
         {/* Floating Elements */}
         <div className="absolute top-20 right-10 w-20 h-20 bg-sky-blue/20 rounded-full animate-float hidden lg:block" />
         <div className="absolute bottom-32 left-16 w-12 h-12 bg-royal-blue/30 rounded-full animate-float" style={{ animationDelay: '1s' }} />
@@ -61,13 +61,13 @@ const Home: React.FC = () => {
               Discover our handpicked selection of premium properties that offer exceptional value and luxury living in Ghana.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {featuredProperties.map((property) => (
               <PropertyCard key={property.id} {...property} />
             ))}
           </div>
-          
+
           <div className="text-center">
             <Link
               to="/properties"
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
               We bring together expertise, integrity, and innovation to deliver exceptional real estate experiences in Ghana.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center group">
               <div className="bg-sky-blue/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sky-blue/20 transition-colors">
@@ -102,7 +102,7 @@ const Home: React.FC = () => {
                 Over 10 years of experience in luxury real estate, providing you with unmatched expertise and market insights.
               </p>
             </div>
-            
+
             <div className="text-center group">
               <div className="bg-sky-blue/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sky-blue/20 transition-colors">
                 <Award size={36} className="text-royal-blue" />
@@ -112,7 +112,7 @@ const Home: React.FC = () => {
                 All our properties are thoroughly authenticated and verified to ensure you get exactly what you expect.
               </p>
             </div>
-            
+
             <div className="text-center group">
               <div className="bg-sky-blue/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-sky-blue/20 transition-colors">
                 <Shield size={36} className="text-royal-blue" />
@@ -137,7 +137,7 @@ const Home: React.FC = () => {
               Explore our diverse range of properties to find the perfect match for your lifestyle and budget.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {propertyCategories.map((category) => {
               const IconComponent = {
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
                 MapPin,
                 Calendar
               }[category.icon as keyof typeof import('lucide-react')] || Building2;
-              
+
               return (
                 <div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
                   <div className="text-center">
@@ -174,7 +174,7 @@ const Home: React.FC = () => {
               Don't just take our word for it. Hear from the families and investors who trusted us with their real estate journey.
             </p>
           </div>
-          
+
           <div className="overflow-x-auto">
             <div className="flex space-x-6 pb-4">
               {testimonials.map((testimonial) => (
@@ -233,9 +233,11 @@ const Home: React.FC = () => {
             >
               Get Started Now
             </Link>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-royal-blue transition-colors font-semibold">
-              Schedule Consultation
-            </button>
+            <Link to="/contact#contact-form" className="w-full sm:w-auto">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-royal-blue transition-colors font-semibold">
+                Schedule Consultation
+              </button>
+            </Link>
           </div>
         </div>
       </section>

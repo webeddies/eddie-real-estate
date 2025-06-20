@@ -170,7 +170,7 @@ const Buy: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact#contact-form" className="w-full sm:w-auto">
-              <button className="w-full sm:w-auto border border-royal-blue text-royal-blue px-6 py-3 rounded-lg hover:bg-royal-blue hover:text-white transition-colors text-sm sm:text-base">
+              <button className="bg-royal-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors">
                 Request Consultation
               </button>
             </Link>
