@@ -3,6 +3,7 @@ import { CheckCircle, Search, Eye, FileCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
+
 const Buy: React.FC = () => {
   const steps = [
     {
@@ -50,9 +51,12 @@ const Buy: React.FC = () => {
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
             From first consultation to keys in hand, we guide you through every step of the home buying process with expertise and care.
           </p>
-          <button className="bg-white text-royal-blue px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-            Start Your Search Today
-          </button>
+          <Link to="/properties?type=buy">
+            <button className="bg-white text-royal-blue px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
+              Start Your Search Today
+            </button>
+          </Link>
+
         </div>
       </section>
 
