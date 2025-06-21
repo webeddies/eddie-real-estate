@@ -16,6 +16,7 @@ interface PropertyCardProps {
 }
 
 const PropertyCard: React.FC<PropertyCardProps> = ({
+  id,
   title,
   price,
   location,
@@ -57,9 +58,10 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-lg font-semibold text-gray-900 group-hover:text-royal-blue transition-colors">
+            <span className="text-xs text-gray-500 mr-1">#{id.toString().padStart(2, '0')}</span>
             {title}
           </h3>
-          <span className="text-xl font-bold text-royal-blue">
+          <span className="text-lg font-bold text-royal-blue">
             {price}
           </span>
         </div>
@@ -71,7 +73,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 
         <div className="flex items-center justify-between text-gray-600 mb-4">
           <div className="flex items-center space-x-4">
-            {/* Show WR for offices */}
             {washrooms !== undefined ? (
               <div className="flex items-center">
                 <Bath size={16} className="mr-1" />
@@ -90,7 +91,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
               </>
             )}
 
-            {/* Area (always shown) */}
             <div className="flex items-center">
               <Square size={16} className="mr-1" />
               <span className="text-sm">{area}</span>
