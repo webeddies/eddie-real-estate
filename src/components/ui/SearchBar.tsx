@@ -38,7 +38,7 @@ const SearchBar: React.FC = () => {
             <input
               type="text"
               placeholder="City, Region"
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent outline-none transition-all"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent outline-none transition-all text-black placeholder-gray-500"
               value={searchData.location}
               onChange={(e) => handleInputChange('location', e.target.value)}
             />
