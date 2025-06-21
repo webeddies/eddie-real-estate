@@ -55,7 +55,7 @@ const SearchBar: React.FC = () => {
               value={searchData.propertyType}
               onChange={(e) => handleInputChange('propertyType', e.target.value)}
             >
-              <option value="" hidden>Select Type</option>
+              <option value="" hidden></option>
               <option value="Luxury Homes">Luxury Homes</option>
               <option value="Private Homes">Private Homes</option>
               <option value="Apartments">Apartments</option>
@@ -75,7 +75,7 @@ const SearchBar: React.FC = () => {
               value={searchData.priceRange}
               onChange={(e) => handleInputChange('priceRange', e.target.value)}
             >
-              <option value="" hidden>Select Budget</option>
+              <option value="" hidden></option>
               <option value="0-250000">Up to $250K</option>
               <option value="250000-500000">$250K - $500K</option>
               <option value="500000-1000000">$500K - $1M</option>
@@ -95,7 +95,7 @@ const SearchBar: React.FC = () => {
               value={searchData.bedrooms}
               onChange={(e) => handleInputChange('bedrooms', e.target.value)}
             >
-              <option value="" hidden>Select</option>
+              <option value="" hidden></option>
               <option value="1">1+ Beds</option>
               <option value="2">2+ Beds</option>
               <option value="3">3+ Beds</option>
