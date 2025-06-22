@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 import {
   ChevronRight,
   Award,
@@ -17,7 +19,9 @@ import PropertyCard from '../components/ui/PropertyCard';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import { properties, testimonials, propertyCategories } from '../constants/data';
 
+
 const Home: React.FC = () => {
+  const navigate = useNavigate();
   const featuredProperties = properties.filter(property => property.featured);
 
   return (
@@ -145,18 +149,29 @@ const Home: React.FC = () => {
                 Home: HomeIcon,
                 Building,
                 MapPin,
-                Calendar
-              }[category.icon as keyof typeof import('lucide-react')] || Building2;
+                Calendar,
+              }[category.icon as keyof typeof import("lucide-react")] || Building2;
 
               return (
-                <div key={category.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer group">
+                /* 🟢 wrap the card in a Link */
+                <Link
+                  key={category.id}
+                  to={`/properties?propertyTypes=${encodeURIComponent(category.types.join(','))}`}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer group"
+                >
+
                   <div className="text-center">
-                    <IconComponent size={36} className="mx-auto mb-4 text-sky-blue group-hover:scale-110 transition-transform" />
+                    <IconComponent
+                      size={36}
+                      className="mx-auto mb-4 text-sky-blue group-hover:scale-110 transition-transform"
+                    />
                     <h3 className="text-lg font-semibold mb-2">{category.name}</h3>
                     <p className="text-blue-100 text-sm mb-3">{category.description}</p>
-                    <span className="text-sky-blue font-semibold">{category.count} Properties</span>
+                    <span className="text-sky-blue font-semibold">
+                      {category.count} Properties
+                    </span>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>

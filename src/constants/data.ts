@@ -1039,41 +1039,45 @@ export const blogPosts = [
     readTime: "6 min read"
   }
 ];
-
 export const propertyCategories = [
   {
     id: 1,
     name: "Apartments",
     icon: "Building2",
     description: "Modern apartments in prime locations",
-    count: 17
+    count: 17,
+    types: ["Apartments"]
   },
   {
     id: 2,
     name: "Houses",
     icon: "Home",
     description: "Family homes and luxury estates",
-    count: 29
+    count: 30,
+    types: ["Luxury Homes", "Private Homes"] // 👈 MULTIPLE types
   },
   {
     id: 3,
     name: "Commercial",
     icon: "Building",
     description: "Office spaces and retail properties",
-    count: 16
+    count: 16,
+    types: ["Commercial"]
   },
   {
     id: 4,
     name: "Lands",
     icon: "MapPin",
     description: "Development plots and agricultural land",
-    count: 0
+    count: 0,
+    types: ["Lands"]
   },
   {
     id: 5,
     name: "Short Stays",
     icon: "Calendar",
     description: "Vacation rentals and short-term stays",
-    count: 8
+    count: 8,
+    types: ["Short Stays"]
   }
 ];
