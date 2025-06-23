@@ -47,7 +47,7 @@ const Agents: React.FC = () => {
               <span>Call Us</span>
             </a>
             <a
-              href="mailto:info@eddieinc.com"
+              href="mailto:info@eddierealty.com"
               className="flex items-center justify-center space-x-2 border-2 border-royal-blue text-royal-blue px-8 py-3 rounded-lg hover:bg-royal-blue hover:text-white transition-colors font-semibold"
             >
               <Mail size={18} />

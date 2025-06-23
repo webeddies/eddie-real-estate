@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <HomeIcon className="h-8 w-8 text-sky-blue" />
-              <span className="text-2xl font-bold">Eddie Inc.</span>
+              <span className="text-2xl font-bold">Eddie Realty</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Your trusted partner in Ghanaian luxury real estate. We deliver comfort, value, and exceptional service to help you find your dream home.
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-sky-blue" />
-                <span className="text-gray-300">info@eddieinc.com</span>
+                <span className="text-gray-300">info@eddierealty.com</span>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Eddie Inc. All rights reserved.
+           Copyright © 2025 Eddie Realty - All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>

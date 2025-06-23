@@ -38,7 +38,7 @@ const Home: React.FC = () => {
 
         <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
-            Find Your Dream Home with <span className="text-sky-blue">Eddie Inc.</span>
+            Find Your Dream Home with <span className="text-sky-blue">Eddie Realty</span>
           </h1>
           <p className="text-xl md:text-2xl mb-12 animate-slide-up opacity-90">
             Luxury, Comfort, and Value – Delivered.
@@ -89,7 +89,7 @@ const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Eddie Inc.
+              Why Choose Eddie Realty
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               We bring together expertise, integrity, and innovation to deliver exceptional real estate experiences in Ghana.
@@ -206,13 +206,13 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-royal-blue mb-2 group-hover:text-sky-blue transition-colors">
-                80+
+                150+
               </div>
               <p className="text-gray-600 font-medium">Properties Sold</p>
             </div>
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-royal-blue mb-2 group-hover:text-sky-blue transition-colors">
-                150+
+                200+
               </div>
               <p className="text-gray-600 font-medium">Happy Clients</p>
             </div>

@@ -927,7 +927,7 @@ export const testimonials = [
     name: "Sarah Adaklu",
     role: "Happy Homeowner",
     image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review-1.jpg",
-    text: "Eddie Inc. made our dream home a reality. Their expertise and dedication throughout the entire process was exceptional, not forgetting Ella's sense of humor!"
+    text: "Eddie Realty made our dream home a reality. Their expertise and dedication throughout the entire process was exceptional, not forgetting Ella's sense of humor!"
   },
   {
     id: 2,
@@ -941,7 +941,7 @@ export const testimonials = [
     name: "Jessica Allotey",
     role: "First-time Buyer",
     image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review%203.jpg",
-    text: "As a first-time buyer, interestingly , I wasn't nervous, and the team at Eddie Inc. repaid my faith in them; they guided me through every step with patience and care."
+    text: "As a first-time buyer, interestingly , I wasn't nervous, and the team at Eddie Realty repaid my faith in them; they guided me through every step with patience and care."
   },
   {
     id: 4,
@@ -961,7 +961,7 @@ export const agents = [
     specialties: ["Luxury Homes", "Investment Properties", "Land Broker"],
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/agent%204.jpg",
     phone: "+1 (555) 987 6522/ +233 (0) 504 923 755",
-    email: "lawcobbinah600@eddieinc.com",
+    email: "lawcobbinah600@eddierealty.com",
     listings: 19
   },
   {
@@ -972,7 +972,7 @@ export const agents = [
     specialties: ["Family Homes", "Apartments", "First-time Buyers"],
     image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%203.jpg",
     phone: "+44 (0)7123 456 789/ +233 (0) 204 313 728",
-    email: "phaella55@eddieinc.com",
+    email: "phaella55@eddierealty.com",
     listings: 27
   },
   {
@@ -983,7 +983,7 @@ export const agents = [
     specialties: ["Commercial", "Industrial",],
     image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%202.jpg",
     phone: "+1 (555) 234 5678/ +233 (0) 548 088 000",
-    email: "finneysmith005@eddieinc.com",
+    email: "finneysmith005@eddierealty.com",
     listings: 7
   },
   {
@@ -994,7 +994,7 @@ export const agents = [
     specialties: ["Airbnbs", "Vacation Rentals"],
     image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%201.jpg",
     phone: "+233 (0) 594 400 878",
-    email: "amandafoster808@eddieinc.com",
+    email: "amandafoster808@eddierealty.com",
     listings: 9
   },
   {
@@ -1004,8 +1004,8 @@ export const agents = [
     experience: "6 Years",
     specialties: ["Commercial", "Land Broker"],
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/agent%205.jpg",
-    phone: "+233 (0) 26 144 374/ +233 (0) 557 795 353",
-    email: "kwilbs211@eddieinc.com",
+    phone: "+233 (0) 265 144 374/ +233 (0) 557 795 353",
+    email: "kwilbs211@eddierealty.com",
     listings: 9
   }
 ];

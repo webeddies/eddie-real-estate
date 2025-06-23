@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const Buy: React.FC = () => {
   const steps = [
     {
@@ -46,7 +47,7 @@ const Buy: React.FC = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Buying Made Simple with <span className="text-sky-blue">Eddie Inc.</span>
+            Buying Made Simple with <span className="text-sky-blue">Eddie Realty</span>
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
             From first consultation to keys in hand, we guide you through every step of the home buying process with expertise and care.
@@ -109,7 +110,7 @@ const Buy: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Eddie Inc. for Buying?
+                Why Choose Eddie Realty for Buying?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Our comprehensive approach ensures you not only find the perfect property in Ghana but also secure it at the best possible terms.
@@ -144,7 +145,7 @@ const Buy: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">80+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">150+</div>
               <p className="text-blue-100">Successful Purchases</p>
             </div>
             <div>

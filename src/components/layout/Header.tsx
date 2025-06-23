@@ -57,7 +57,7 @@ const Header: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={16} />
-                <span>info@eddieinc.com</span>
+                <span>info@eddierealty.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2">
               <HomeIcon className="h-8 w-8 text-royal-blue" />
-              <span className="text-2xl font-bold text-royal-blue">Eddie Inc.</span>
+              <span className="text-2xl font-bold text-royal-blue">Eddie Realty</span>
             </Link>
 
             {/* Desktop Navigation */}
