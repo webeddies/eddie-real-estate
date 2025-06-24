@@ -8,6 +8,7 @@ const Properties: React.FC = () => {
   const [filteredProperties, setFilteredProperties] = useState(properties);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
+  
 
   /** full filter state */
   const [filters, setFilters] = useState({
@@ -39,6 +40,8 @@ const Properties: React.FC = () => {
     propertyType: params.get('propertyType') || '',
     propertyTypeList: [] as string[]          //  ← add the field here
   };
+  searchFilters.status = params.get('status') || '';
+
 
   // ?propertyTypes=Luxury Homes,Private Homes
   const typesParam = params.get('propertyTypes');

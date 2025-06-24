@@ -77,23 +77,37 @@ const ScheduleVisitModal: React.FC<ScheduleVisitModalProps> = ({ onClose }) => {
             required
             className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
           />
+
+          {/* Date & Time Fields with Labels */}
           <div className="flex space-x-3">
-            <input
-              type="date"
-              name="date"
-              value={formData.date}
-              onChange={handleChange}
-              required
-              className="w-1/2 border border-gray-300 rounded-lg px-3 py-2 text-sm"
-            />
-            <input
-              type="time"
-              name="time"
-              value={formData.time}
-              onChange={handleChange}
-              required
-              className="w-1/2 border border-gray-300 rounded-lg px-3 py-2 text-sm"
-            />
+            <div className="w-1/2">
+              <label htmlFor="date" className="block text-xs font-medium text-gray-600 mb-1">
+                Date
+              </label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-700 focus:ring-2 focus:ring-royal-blue"
+              />
+            </div>
+            <div className="w-1/2">
+              <label htmlFor="time" className="block text-xs font-medium text-gray-600 mb-1">
+                Time
+              </label>
+              <input
+                type="time"
+                name="time"
+                id="time"
+                value={formData.time}
+                onChange={handleChange}
+                required
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-700 focus:ring-2 focus:ring-royal-blue"
+              />
+            </div>
           </div>
 
           {/* Additional Notes */}

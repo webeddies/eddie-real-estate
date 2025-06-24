@@ -321,7 +321,7 @@ export const properties = [
     area: "380 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t7.jfif",
     status: "For Sale",
-    propertyType: "Apartments",
+    propertyType: "Private Homes",
     featured: false
   },
   {

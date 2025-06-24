@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <HomeIcon className="h-8 w-8 text-sky-blue" />
-              <span className="text-2xl font-bold">Eddie Realty</span>
+              <span className="text-2xl font-bold text-sky-blue">Eddie Realty</span>
             </div>
             <p className="text-gray-300 leading-relaxed">
               Your trusted partner in Ghanaian luxury real estate. We deliver comfort, value, and exceptional service to help you find your dream home.
