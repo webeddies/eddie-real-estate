@@ -51,14 +51,24 @@ const Header: React.FC = () => {
         <div className="bg-royal-blue text-white py-2 px-4 hidden md:block">
           <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
-              <div className="flex items-center space-x-2">
+              <a
+                href="tel:+233555198595"
+                className="flex items-center space-x-2 transform transition-transform duration-200 hover:scale-105"
+              >
                 <Phone size={16} />
                 <span>+233 (0) 555 198 595</span>
-              </div>
-              <div className="flex items-center space-x-2">
+              </a>
+
+
+              <a
+                href="mailto:info@eddierealty.com"
+                className="flex items-center space-x-2 transform transition-transform duration-200 hover:scale-105"
+              >
                 <Mail size={16} />
                 <span>info@eddierealty.com</span>
-              </div>
+              </a>
+
+
             </div>
             <div className="flex items-center space-x-4">
               <Facebook size={16} className="hover:text-sky-blue cursor-pointer transition-colors" />
@@ -95,7 +105,7 @@ const Header: React.FC = () => {
             <div className="hidden lg:block">
               <button
                 onClick={() => setShowVisitModal(true)}          // ✅ open modal
-                className="bg-royal-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center space-x-2"
+                className="bg-royal-blue text-white px-6 py-2 rounded-lg flex items-center space-x-2 justify-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-blue-700"
               >
                 <Calendar size={18} />
                 <span>Schedule a Visit</span>

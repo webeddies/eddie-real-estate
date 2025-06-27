@@ -1,6 +1,9 @@
 import React from 'react';
 import { CheckCircle, Search, Eye, FileCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
+
 
 
 
@@ -36,27 +39,36 @@ const Buy: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-royal-blue to-blue-700 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+      <section className="relative text-white py-28 md:py-32 overflow-hidden">
+        <div className="absolute inset-0">
           <div
             className="w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://www.globalpropertiesafrica.com/propertygallery/74648939243eb68f51eeef2a9bb4e4f3250f2a0fc.jpg)'
+              backgroundImage: 'url(https://anaarkutu.com/wp-content/uploads/2022/04/DJI_0410-1.jpg)'
             }}
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-sky-200 text-transparent bg-clip-text drop-shadow-md"
+          >
             Buying Made Simple with <span className="text-sky-blue">Eddie Realty</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
-            From first consultation to keys in hand, we guide you through every step of the home buying process with expertise and care.
-          </p>
-          <Link to="/properties?type=buy">
-            <button className="bg-white text-royal-blue px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-              Start Your Search Today
-            </button>
-          </Link>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 1.2, ease: 'easeOut' }}
+          >
+            <Link to="/properties?status=For Sale">
+              <button className="mt-8 text-lg font-semibold px-8 py-3 rounded-lg bg-white/10 border border-white text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-200 hover:bg-white hover:text-royal-blue hover:bg-clip-border transition-colors duration-300">
+                Start Your Search Today
+              </button>
+            </Link>
+          </motion.div>
 
         </div>
       </section>
@@ -76,27 +88,31 @@ const Buy: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
+              const bgImages = [
+                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/browse.jpg')", // Browsing
+                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/view.jpg')", // Viewing
+                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/secure.jpg')"  // Securing
+              ];
+
               return (
-                <div key={index} className="relative">
-                  <div className="bg-white border-2 border-gray-100 rounded-xl p-8 hover:border-royal-blue hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="bg-royal-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <IconComponent size={32} className="text-royal-blue" />
+                <div key={index} className="relative overflow-hidden rounded-xl h-full">
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: bgImages[index] }}
+                  ></div>
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/50" />
+
+                  {/* Content */}
+                  <div className="relative z-10 text-white p-8 h-full flex flex-col justify-between">
+                    <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-4 mx-auto">
+                      <IconComponent size={28} />
                     </div>
-                    <div className="absolute top-4 left-4 bg-royal-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
-                      {index + 1}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 text-center leading-relaxed">
-                      {step.description}
-                    </p>
+                    <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
+                    <p className="text-center text-sm">{step.description}</p>
                   </div>
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                      <ArrowRight size={24} className="text-royal-blue" />
-                    </div>
-                  )}
                 </div>
               );
             })}
@@ -108,7 +124,13 @@ const Buy: React.FC = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            {/* Left Text Column with animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Eddie Realty for Buying?
               </h2>
@@ -117,21 +139,36 @@ const Buy: React.FC = () => {
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
+                  <motion.div
+                    key={index}
+                    className="flex items-start space-x-3"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * index, duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
                     <CheckCircle size={20} className="text-green-500 mt-1 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-            <div className="relative">
+            </motion.div>
+
+            {/* Right Image Column with animation */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false, amount: 0.3 }}
+              className="relative"
+            >
               <img
                 src="https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t2.jfif"
                 alt="Happy family with keys"
                 className="rounded-xl shadow-lg w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-royal-blue/20 to-transparent rounded-xl"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -145,7 +182,7 @@ const Buy: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">150+</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
               <p className="text-blue-100">Successful Purchases</p>
             </div>
             <div>
@@ -179,7 +216,7 @@ const Buy: React.FC = () => {
                 Request Consultation
               </button>
             </Link>
-            <Link to="/properties">
+            <Link to="/properties?status=For Sale">
               <button className="border-2 border-royal-blue text-royal-blue px-8 py-2.5 rounded-lg hover:bg-royal-blue hover:text-white transition-colors font-semibold">
                 Browse Properties
               </button>

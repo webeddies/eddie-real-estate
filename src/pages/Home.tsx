@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import {
   ChevronRight,
@@ -37,16 +38,25 @@ const Home: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
 
         <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+          <motion.h1
+            initial={{ opacity: 0, y: 50, letterSpacing: '0.1em', filter: 'blur(4px)' }}
+            animate={{ opacity: 1, y: 0, letterSpacing: '0em', filter: 'blur(0px)' }}
+            transition={{ duration: 1.6, ease: 'easeOut' }}
+            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-sky-200 text-transparent bg-clip-text drop-shadow-md"
+          >
             Find Your Dream Home with <span className="text-sky-blue">Eddie Realty</span>
-          </h1>
+          </motion.h1>
           <p className="text-xl md:text-2xl mb-12 animate-slide-up opacity-90">
             Luxury, Comfort, and Value – Delivered.
           </p>
 
-          <div className="animate-slide-up" style={{ animationDelay: '0.3s' }}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.9, duration: 0.6, ease: 'easeOut' }}
+          >
             <SearchBar />
-          </div>
+          </motion.div>
         </div>
 
         {/* Floating Elements */}
@@ -206,13 +216,13 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-royal-blue mb-2 group-hover:text-sky-blue transition-colors">
-                150+
+                100+
               </div>
               <p className="text-gray-600 font-medium">Properties Sold</p>
             </div>
             <div className="group">
               <div className="text-4xl md:text-5xl font-bold text-royal-blue mb-2 group-hover:text-sky-blue transition-colors">
-                200+
+                150+
               </div>
               <p className="text-gray-600 font-medium">Happy Clients</p>
             </div>

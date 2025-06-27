@@ -1,6 +1,8 @@
 import React from 'react';
 import { CheckCircle, Search, Eye, FileCheck, ArrowRight, Home, Shield, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 const Rent: React.FC = () => {
   const steps = [
@@ -70,14 +72,26 @@ const Rent: React.FC = () => {
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+            className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-sky-200 text-transparent bg-clip-text drop-shadow-md"
+          >
             Find It. View It. Rent It.
-          </h1>
-          <Link to="/properties?status=For Rent">
-            <button className="mt-8 bg-white text-royal-blue px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg">
-              Browse Rental Properties
-            </button>
-          </Link>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 1, ease: 'easeOut' }}
+          >
+            <Link to="/properties?status=For Rent">
+              <button className="mt-8 text-lg font-semibold px-8 py-3 rounded-lg bg-white/10 border border-white text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-200 hover:bg-white hover:text-royal-blue hover:bg-clip-border transition-colors duration-300">
+                Browse Rental Properties
+              </button>
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -89,34 +103,38 @@ const Rent: React.FC = () => {
               Your Rental Journey in 3 Easy Steps
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              From search to signing, we’ve made renting in Ghana clear, quick, and convenient.
+              From search to signing, we’ve made renting in Ghana transparent, quick, and convenient.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
+              const bgImages = [
+                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/browse.jpg')", // Browsing
+                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/view.jpg')", // Viewing
+                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/secure.jpg')"  // Securing
+              ];
+
               return (
-                <div key={index} className="relative">
-                  <div className="bg-white border-2 border-gray-100 rounded-xl p-8 hover:border-royal-blue hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="bg-royal-blue/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <IconComponent size={32} className="text-royal-blue" />
+                <div key={index} className="relative overflow-hidden rounded-xl h-full">
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: bgImages[index] }}
+                  ></div>
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/50" />
+
+                  {/* Content */}
+                  <div className="relative z-10 text-white p-8 h-full flex flex-col justify-between">
+                    <div className="w-12 h-12 flex items-center justify-center bg-white/20 rounded-full mb-4 mx-auto">
+                      <IconComponent size={28} />
                     </div>
-                    <div className="absolute top-4 left-4 bg-royal-blue text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
-                      {index + 1}
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-600 text-center leading-relaxed">
-                      {step.description}
-                    </p>
+                    <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
+                    <p className="text-center text-sm">{step.description}</p>
                   </div>
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2">
-                      <ArrowRight size={24} className="text-royal-blue" />
-                    </div>
-                  )}
                 </div>
               );
             })}
@@ -141,9 +159,7 @@ const Rent: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Rental Property Types
             </h2>
-            <p className="text-lg max-w-3xl mx-auto">
-              Choose from our diverse range of rental properties designed to meet different lifestyles and budgets.
-            </p>
+
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -182,38 +198,71 @@ const Rent: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+            {/* Left Text Column with animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Why Rent with Eddie Realty?
+                Why Choose Eddie Realty for Renting?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Experience hassle-free renting with our comprehensive support services and verified property listings across Ghana.
+                With our in-depth local knowledge and streamlined process, we help you rent the perfect home without stress.
               </p>
               <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle size={20} className="text-green-500 mt-1 flex-shrink-0" />
+                {[
+                  "Wide selection of verified rental listings",
+                  "Flexible viewing schedules",
+                  "No hidden fees or surprises",
+                  "Fast and secure rental processing",
+                  "Dedicated support every step of the way"
+                ].map((benefit, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start space-x-3"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * index, duration: 0.5 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                  >
+                    <svg
+                      className="w-5 h-5 text-green-500 mt-1 flex-shrink-0"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
                     <span className="text-gray-700">{benefit}</span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
-            <div className="relative">
+            </motion.div>
+
+            {/* Right Image Column with animation */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: false, amount: 0.3 }}
+              className="relative"
+            >
               <img
                 src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Modern rental apartment"
+                alt="Tenant finding a new home"
                 className="rounded-xl shadow-lg w-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-royal-blue/20 to-transparent rounded-xl"></div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
-
-      
 
       {/* Statistics */}
       <section className="py-20 bg-royal-blue text-white">
@@ -224,11 +273,11 @@ const Rent: React.FC = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">500+</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">150+</div>
               <p className="text-blue-100">Active Rentals</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">95%</div>
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2">91%</div>
               <p className="text-blue-100">Tenant Satisfaction</p>
             </div>
             <div>
@@ -247,14 +296,14 @@ const Rent: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Find Your Next Home?
+            Ready to Find Your Next Home or Commercial Space?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Browse our extensive collection of rental properties and let our team help you find the perfect place to call home.
+            Browse our extensive collection of rental properties and let our team help you find the perfect place to rent.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/properties?status=For Rent">
-              <button className="bg-royal-blue text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-600 transition-colors">
+              <button className="bg-royal-blue text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-blue-600 transition-colors">
                 Browse Rentals
               </button>
             </Link>
