@@ -89,9 +89,9 @@ const Buy: React.FC = () => {
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               const bgImages = [
-                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/browse.jpg')", // Browsing
-                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/view.jpg')", // Viewing
-                "url('https://raw.githubusercontent.com/webeddies/eddie-real-estate/refs/heads/main/secure.jpg')"  // Securing
+                "url('https://raw.githubusercontent.com/webeddies/Real-Estate-Agents/refs/heads/main/browse.jpg')", // Browsing
+                "url('https://raw.githubusercontent.com/webeddies/Real-Estate-Agents/refs/heads/main/client%20agent%20view.png')", // Viewing
+                "url('https://raw.githubusercontent.com/webeddies/Real-Estate-Agents/refs/heads/main/secure.jpg')"  // Securing
               ];
 
               return (

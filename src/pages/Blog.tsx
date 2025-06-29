@@ -17,16 +17,29 @@ const Blog: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-royal-blue to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="relative py-20 min-h-[320px] flex items-center justify-center">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-center bg-cover opacity-20"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80')" }}
+
+          aria-hidden="true"
+        ></div>
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Text content */}
+        <div className="relative max-w-4xl mx-auto px-4 text-center text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
             Market Insights & Expert Advice
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto animate-fade-up-delay opacity-0">
             Stay informed with the latest real estate trends, buying and selling tips, and market analysis from our expert team.
           </p>
         </div>
       </section>
+
 
       {/* Blog Stats */}
       <section className="py-12 bg-white border-b">
@@ -75,17 +88,15 @@ const Blog: React.FC = () => {
                   {categories.map((category, index) => (
                     <button
                       key={index}
-                      className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${
-                        category.active 
-                          ? 'bg-royal-blue text-white' 
-                          : 'text-gray-600 hover:bg-gray-100'
-                      }`}
+                      className={`w-full text-left px-3 py-2 rounded-lg transition-colors ${category.active
+                        ? 'bg-royal-blue text-white'
+                        : 'text-gray-600 hover:bg-gray-100'
+                        }`}
                     >
                       <div className="flex justify-between items-center">
                         <span>{category.name}</span>
-                        <span className={`text-sm ${
-                          category.active ? 'text-blue-200' : 'text-gray-400'
-                        }`}>
+                        <span className={`text-sm ${category.active ? 'text-blue-200' : 'text-gray-400'
+                          }`}>
                           {category.count}
                         </span>
                       </div>
@@ -118,7 +129,7 @@ const Blog: React.FC = () => {
               {/* Featured Post */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
                 <div className="relative">
-                  <img 
+                  <img
                     src={featuredPost.image}
                     alt={featuredPost.title}
                     className="w-full h-64 md:h-80 object-cover"
@@ -161,7 +172,7 @@ const Blog: React.FC = () => {
                 {regularPosts.map((post) => (
                   <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                     <div className="relative">
-                      <img 
+                      <img
                         src={post.image}
                         alt={post.title}
                         className="w-full h-48 object-cover"

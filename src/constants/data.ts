@@ -941,7 +941,7 @@ export const testimonials = [
     name: "Jessica Allotey",
     role: "First-time Buyer",
     image: "https://raw.githubusercontent.com/Webeddies/reviewer-images/refs/heads/main/review%203.jpg",
-    text: "As a first-time buyer, interestingly , I wasn't nervous, and the team at Eddie Realty repaid my faith in them; they guided me through every step with patience and care."
+    text: "As a first-time buyer, I had no idea what to expect. Their team was patient, explained everything clearly, and even took me on a site tour. I’m now a proud landowner in Oyibi and I’m already planning my second investment with them."
   },
   {
     id: 4,

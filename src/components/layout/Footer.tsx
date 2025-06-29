@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
+import {
   Home as HomeIcon,
-  Phone, 
-  Mail, 
+  Phone,
+  Mail,
   MapPin,
-  Facebook, 
-  Linkedin, 
+  Facebook,
+  Linkedin,
   Instagram,
   Twitter
 } from 'lucide-react';
@@ -37,11 +37,11 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-sky-blue">Quick Links</h3>
             <div className="space-y-2">
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors">Home</Link>
-              <Link to="/properties" className="block text-gray-300 hover:text-white transition-colors">Properties</Link>
-              <Link to="/agents" className="block text-gray-300 hover:text-white transition-colors">Our Agents</Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-white transition-colors">Market Insights</Link>
-              <Link to="/about" className="block text-gray-300 hover:text-white transition-colors">About Us</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Home</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Properties</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Our Agents</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Market Insights</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">About Us</Link>
             </div>
           </div>
 
@@ -49,11 +49,22 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-sky-blue">Services</h3>
             <div className="space-y-2">
-              <Link to="/buy" className="block text-gray-300 hover:text-white transition-colors">Property Buying</Link>
-              <Link to="/rent" className="block text-gray-300 hover:text-white transition-colors">Property Rental</Link>
-              <Link to="/sell" className="block text-gray-300 hover:text-white transition-colors">Property Selling</Link>
-              <span className="block text-gray-300">Property Management</span>
-              <span className="block text-gray-300">Investment Consulting</span>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Property Buying</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Property Rental</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Property Selling</Link>
+              <span
+                className="block text-gray-300 cursor-pointer transition-colors transition-transform duration-300 hover:text-white hover:translate-x-1"
+                onClick={() => { }}
+              >
+                Property Management
+              </span>
+              <span
+                className="block text-gray-300 cursor-pointer transition-colors transition-transform duration-300 hover:text-white hover:translate-x-1"
+                onClick={() => { }}
+              >
+                Investment Consulting
+              </span>
+
             </div>
           </div>
 
@@ -70,11 +81,21 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-sky-blue" />
-                <span className="text-gray-300">+233 (0) 555 198 595</span>
+                <a
+                  href="tel:+233555198595"
+                  className="text-gray-300 transition-transform duration-300 hover:translate-x-1 hover:text-white cursor-pointer"
+                >
+                  +233 (0) 555 198 595
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-sky-blue" />
-                <span className="text-gray-300">info@eddierealty.com</span>
+                <a
+                  href="mailto:info@eddierealty.com"
+                  className="text-gray-300 transition-transform duration-300 hover:translate-x-1 hover:text-white cursor-pointer"
+                >
+                  info@eddierealty.com
+                </a>
               </div>
             </div>
           </div>
@@ -83,7 +104,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-           Copyright © 2025 Eddie Realty - All rights reserved.
+            Copyright © 2025 Eddie Realty - All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>

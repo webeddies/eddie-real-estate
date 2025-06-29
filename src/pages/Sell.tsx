@@ -37,7 +37,7 @@ const Sell: React.FC = () => {
     "Multi-platform marketing reach and exposure",
     "Expert negotiation to maximize your sale price",
     "Complete legal documentation and transaction support",
-    "Average 15% higher sale prices than market average"
+    "Average 12% higher sale prices than market average"
   ];
 
   const sellingServices = [
@@ -136,44 +136,44 @@ const Sell: React.FC = () => {
           >
             {[
               {
-                name: "Sarah & Michael Asante",
+                name: "Sarah & Amos Edudzi Tamakloe",
                 role: "Property Sellers, East Legon",
-                img: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1",
+                img: "https://raw.githubusercontent.com/webeddies/reviewer-images/refs/heads/main/review%2016.jpg",
                 message:
                   "Eddie Realty exceeded our expectations. They sold our property 12% above our initial asking price and completed the transaction in less than a month",
               },
               {
                 name: "Felix Kwame Nyame",
                 role: "Apartment Owner, Spintex",
-                img: "https://randomuser.me/api/portraits/men/32.jpg",
+                img: "https://raw.githubusercontent.com/webeddies/reviewer-images/refs/heads/main/review%2015.jpg",
                 message:
                   "Professional, efficient, and trustworthy. My flat was sold within two weeks at a premium price — couldn’t ask for more.",
               },
               {
                 name: "Linda Osei-Assibey",
                 role: "Homeowner, Ejisu",
-                img: "https://randomuser.me/api/portraits/women/44.jpg",
+                img: "https://raw.githubusercontent.com/webeddies/reviewer-images/refs/heads/main/review%2014.jpg",
                 message:
                   "From valuation to closing, Eddie Realty made the process effortless. Their marketing approach is top-notch.",
               },
               {
                 name: "Darius Adu Poku",
                 role: "Land Seller, Oyarifa",
-                img: "https://randomuser.me/api/portraits/men/68.jpg",
+                img: "https://raw.githubusercontent.com/webeddies/reviewer-images/refs/heads/main/review%2013.jpg",
                 message:
                   "I never imagined selling my land could be this smooth. Eddie Realty handled every detail and got me a great offer in less than a month.",
               },
               {
                 name: "Lovelace Serwaa Danso",
                 role: "Homeowner, Takoradi",
-                img: "https://randomuser.me/api/portraits/women/65.jpg",
+                img: "https://raw.githubusercontent.com/webeddies/reviewer-images/refs/heads/main/review%206.jpg",
                 message:
                   "Their professionalism was unmatched. From the listing to the closing, I felt supported throughout.",
               },
               {
                 name: "Daniel K. Tetteh",
                 role: "Property Investor, Kumasi",
-                img: "https://randomuser.me/api/portraits/men/41.jpg",
+                img: "https://raw.githubusercontent.com/webeddies/reviewer-images/refs/heads/main/review%208.jpg",
                 message:
                   "What stood out was their market insight. They advised me on pricing, and we closed the deal at 10% above market average. I will always choose them.",
               }

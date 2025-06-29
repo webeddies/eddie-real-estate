@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
+import ScrollToTop from './components/layout/ScrollToTop';
+
 import Home from './pages/Home';
 import Properties from './pages/Properties';
 import Buy from './pages/Buy';
@@ -22,6 +24,7 @@ const About: React.FC = () => (
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
