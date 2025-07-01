@@ -374,195 +374,196 @@ const Sell: React.FC = () => {
 
       {isModalOpen && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center px-4">
-          <div className="bg-white rounded-xl shadow-lg w-full max-w-2xl md:max-w-3xl p-6 md:p-8 relative animate-fade-in text-sm max-h-[90vh] overflow-y-auto">
+          <div className="relative bg-white rounded-xl shadow-lg w-full max-w-2xl md:max-w-3xl animate-fade-in">
 
-
-            {/* Close Button */}
+            {/* Close Button - fixed inside modal box */}
             <button
               onClick={() => setIsModalOpen(false)}
-              className="absolute top-2.5 right-3 text-gray-400 hover:text-red-500 text-xl font-bold"
+              className="absolute top-3 right-4 z-10 text-gray-400 hover:text-red-500 text-xl font-bold"
               aria-label="Close modal"
             >
               &times;
             </button>
 
-            {/* Modal Header */}
-            <h2 className="text-xl font-semibold mb-4 text-center text-royal-blue">
-              Property Valuation Form
-            </h2>
+            {/* Scrollable content area */}
+            <div className="max-h-[90vh] overflow-y-auto p-6 md:p-8 text-sm">
+              {/* Modal Header */}
+              <h2 className="text-xl font-semibold mb-4 text-center text-royal-blue">
+                Property Valuation Form
+              </h2>
 
-            {/* Modal Form */}
-            <form className="space-y-4">
-              {/* 2-column layout for top fields */}
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-gray-700 text-xs font-medium mb-1">Full Name</label>
-                  <input
-                    type="text"
-                    className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-gray-700 text-xs font-medium mb-1">Email</label>
-                  <input
-                    type="email"
-                    placeholder="e.g. example@gmail.com"
-                    className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-gray-700 text-xs font-medium mb-1">Phone Number</label>
-                  <div className="flex space-x-2">
-                    {/* Country Code Dropdown */}
-                    <select
-                      required
-                      className="w-32 border border-gray-300 rounded-md px-2 py-1.5 text-sm"
-                      defaultValue="+233"
-                    >
-                      <option value="+233">+233 (Ghana)</option>
-                      <option value="+1">+1 (USA/Canada)</option>
-                      <option value="+44">+44 (United Kingdom)</option>
-                      <option value="+49">+49 (Germany)</option>
-                      <option value="+31">+31 (Netherlands)</option>
-                      <option value="+33">+33 (France)</option>
-                      <option value="+61">+61 (Australia)</option>
-                      <option value="+971">+971 (UAE)</option>
-                      <option value="+27">+27 (South Africa)</option>
-                      <option value="+234">+234 (Nigeria)</option>
-                      <option value="+39">+39 (Italy)</option>
-                      <option value="+32">+32 (Belgium)</option>
-                      <option value="+46">+46 (Sweden)</option>
-                      <option value="+41">+41 (Switzerland)</option>
-                      <option value="+966">+966 (Saudi Arabia)</option>
-                      <option value="+974">+974 (Qatar)</option>
-                      <option value="+353">+353 (Ireland)</option>
-                      <option value="+48">+48 (Poland)</option>
-                      <option value="+34">+34 (Spain)</option>
-                      <option value="+86">+86 (China)</option>
-                      <option value="+81">+81 (Japan)</option>
-                      <option value="+91">+91 (India)</option>
-                    </select>
-
-                    {/* Actual Phone Number Input */}
-                    <input
-                      type="tel"
-                      required
-                      placeholder="Enter phone number"
-                      className="flex-1 border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {/* ID Type Dropdown - smaller */}
-                  <div className="md:col-span-1">
-                    <label className="block text-gray-700 text-xs font-medium mb-1">National ID Type</label>
-                    <select
-                      required
-                      className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    >
-                      <option value="">Select</option>
-                      <option>Ghana Card</option>
-                      <option>Voter's ID</option>
-                      <option>Passport</option>
-                      <option>Driver's License</option>
-                    </select>
-                  </div>
-
-                  {/* ID Number Input - wider */}
-                  <div className="md:col-span-2">
-                    <label className="block text-gray-700 text-xs font-medium mb-1">ID Number</label>
+              {/* Modal Form */}
+              <form className="space-y-4">
+                {/* 2-column layout for top fields */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-gray-700 text-xs font-medium mb-1">Full Name</label>
                     <input
                       type="text"
-                      required
-                      placeholder="ID Number"
                       className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-700 text-xs font-medium mb-1">Email</label>
+                    <input
+                      type="email"
+                      placeholder="e.g. example@gmail.com"
+                      className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-gray-700 text-xs font-medium mb-1">Phone Number</label>
+                    <div className="flex space-x-2">
+                      {/* Country Code Dropdown */}
+                      <select
+                        required
+                        className="w-32 border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+                        defaultValue="+233"
+                      >
+                        <option value="+233">+233 (Ghana)</option>
+                        <option value="+1">+1 (USA/Canada)</option>
+                        <option value="+44">+44 (United Kingdom)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+31">+31 (Netherlands)</option>
+                        <option value="+33">+33 (France)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+971">+971 (UAE)</option>
+                        <option value="+27">+27 (South Africa)</option>
+                        <option value="+234">+234 (Nigeria)</option>
+                        <option value="+39">+39 (Italy)</option>
+                        <option value="+32">+32 (Belgium)</option>
+                        <option value="+46">+46 (Sweden)</option>
+                        <option value="+41">+41 (Switzerland)</option>
+                        <option value="+966">+966 (Saudi Arabia)</option>
+                        <option value="+974">+974 (Qatar)</option>
+                        <option value="+353">+353 (Ireland)</option>
+                        <option value="+48">+48 (Poland)</option>
+                        <option value="+34">+34 (Spain)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+91">+91 (India)</option>
+                      </select>
+
+                      {/* Actual Phone Number Input */}
+                      <input
+                        type="tel"
+                        required
+                        placeholder="Enter phone number"
+                        className="flex-1 border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {/* ID Type Dropdown - smaller */}
+                    <div className="md:col-span-1">
+                      <label className="block text-gray-700 text-xs font-medium mb-1">National ID Type</label>
+                      <select
+                        required
+                        className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      >
+                        <option value="">Select</option>
+                        <option>Ghana Card</option>
+                        <option>Voter's ID</option>
+                        <option>Passport</option>
+                        <option>Driver's License</option>
+                      </select>
+                    </div>
+
+                    {/* ID Number Input - wider */}
+                    <div className="md:col-span-2">
+                      <label className="block text-gray-700 text-xs font-medium mb-1">ID Number</label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="ID Number"
+                        className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-gray-700 text-xs font-medium mb-1">Property Location</label>
+                    <input
+                      type="text"
+                      placeholder="e.g. Adabraka, Greater Accra - GA-123-4567"
+                      className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      required
                     />
                   </div>
                 </div>
+
+                {/* Property type - single full width */}
                 <div>
-                  <label className="block text-gray-700 text-xs font-medium mb-1">Property Location</label>
-                  <input
-                    type="text"
-                    placeholder="e.g. Adabraka, Greater Accra - GA-123-4567"
-                    className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    required
-                  />
+                  <label className="block text-gray-700 text-xs font-medium mb-1">Property Type</label>
+                  <select className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm">
+                    <option>-- Select an option --</option>
+                    <option>House</option>
+                    <option>Apartment</option>
+                    <option>Commercial</option>
+                    <option>Land</option>
+                  </select>
                 </div>
-              </div>
 
-              {/* Property type - single full width */}
-              <div>
-                <label className="block text-gray-700 text-xs font-medium mb-1">Property Type</label>
-                <select className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm">
-                  <option>-- Select an option --</option>
-                  <option>House</option>
-                  <option>Apartment</option>
-                  <option>Commercial</option>
-                  <option>Land</option>
-                </select>
-              </div>
-
-              {/* Image upload */}
-              <div>
-                <label htmlFor="propertyImages" className="block text-sm font-medium text-gray-700 mb-2">
-                  Upload Property Images & Ownership Documents
-                </label>
-                <input
-                  type="file"
-                  id="propertyImages"
-                  name="propertyImages"
-                  accept="image/*"
-                  multiple
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-sm file:bg-royal-blue/90 file:text-white hover:file:bg-royal-blue transition-all"
-                />
-                <p className="text-xs text-gray-500 mt-1">You can upload up to 10 images (JPG, PNG).</p>
-              </div>
-
-              {/* Inspection grid */}
-              <div className="grid md:grid-cols-2 gap-6">
+                {/* Image upload */}
                 <div>
-                  <label className="block text-gray-700 text-xs font-medium mb-1">Preferred Date of Inspection</label>
+                  <label htmlFor="propertyImages" className="block text-sm font-medium text-gray-700 mb-2">
+                    Upload Property Images & Ownership Documents
+                  </label>
                   <input
-                    type="date"
-                    className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    required
+                    type="file"
+                    id="propertyImages"
+                    name="propertyImages"
+                    accept="image/*"
+                    multiple
+                    className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 file:mr-4 file:py-2 file:px-4 file:border-0 file:text-sm file:bg-royal-blue/90 file:text-white hover:file:bg-royal-blue transition-all"
                   />
+                  <p className="text-xs text-gray-500 mt-1">You can upload up to 10 images (JPG, PNG).</p>
                 </div>
+
+                {/* Inspection grid */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-gray-700 text-xs font-medium mb-1">Preferred Date of Inspection</label>
+                    <input
+                      type="date"
+                      className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-700 text-xs font-medium mb-1">Preferred Time of Inspection</label>
+                    <input
+                      type="time"
+                      className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
+                      required
+                    />
+                  </div>
+                </div>
+
+                {/* Textarea */}
                 <div>
-                  <label className="block text-gray-700 text-xs font-medium mb-1">Preferred Time of Inspection</label>
-                  <input
-                    type="time"
+                  <label className="block text-gray-700 text-xs font-medium mb-1">Additional Details</label>
+                  <textarea
                     className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                    required
-                  />
+                    rows={2}
+                    placeholder="e.g. Condition of property, features, urgent sale..."
+                  ></textarea>
                 </div>
-              </div>
 
-              {/* Textarea */}
-              <div>
-                <label className="block text-gray-700 text-xs font-medium mb-1">Additional Details</label>
-                <textarea
-                  className="w-full border border-gray-300 rounded-md px-3 py-1.5 text-sm"
-                  rows={2}
-                  placeholder="e.g. Condition of property, features, urgent sale..."
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-royal-blue text-white py-2 rounded-md hover:bg-blue-600 transition text-sm font-medium"
-              >
-                Submit
-              </button>
-            </form>
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="w-full bg-royal-blue text-white py-2 rounded-md hover:bg-blue-600 transition text-sm font-medium"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       )}
-
     </div>
   );
 };
