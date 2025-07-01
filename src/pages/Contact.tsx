@@ -12,20 +12,20 @@ const Contact: React.FC = () => {
     message: ''
   });
   useEffect(() => {
-  if (location.hash === '#contact-form') {
-    // Delay scrolling to ensure the element has rendered
-    const timeout = setTimeout(() => {
-      const el = document.getElementById('contact-form');
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100); // wait 100ms
+    if (location.hash === '#contact-form') {
+      // Delay scrolling to ensure the element has rendered
+      const timeout = setTimeout(() => {
+        const el = document.getElementById('contact-form');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); // wait 100ms
 
-    return () => clearTimeout(timeout); // clean up
-  }
-}, [location]);
+      return () => clearTimeout(timeout); // clean up
+    }
+  }, [location]);
 
-  
+
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
@@ -66,16 +66,28 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-royal-blue to-blue-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <section
+        className="relative h-[65vh] bg-cover bg-center bg-no-repeat text-white flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url('https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/contact%20us.jpg')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Text Content */}
+        <div className="relative z-10 text-center px-4 max-w-3xl">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
             Get in Touch
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Ready to start your real estate journey? We're here to help with expert guidance and personalized service.
+          <p className="text-xl text-gray-200 animate-fade-up-delay">
+            Leave us a message by filling in the form below and we will get back to you as soon as possible.
           </p>
         </div>
       </section>
+
+
 
       {/* Contact Form & Map */}
       <section className="py-20">
@@ -246,20 +258,33 @@ const Contact: React.FC = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+      <section
+        className="relative bg-fixed bg-center bg-cover py-28 md:py-32"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')", // You can replace this with any image URL you like
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/50 z-0" />
+
+        {/* Floating FAQ content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-white">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-blue-100 text-lg">
               Find answers to common questions about our services and processes.
             </p>
           </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-6">
+              <div
+                key={index}
+                className="bg-white/90 border border-white rounded-lg p-6 text-gray-800"
+              >
                 <div className="flex items-start space-x-4">
                   <div className="bg-royal-blue/10 p-2 rounded-lg flex-shrink-0">
                     <MessageSquare className="text-royal-blue" size={20} />
@@ -268,9 +293,7 @@ const Contact: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
                       {faq.question}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                   </div>
                 </div>
               </div>
@@ -278,6 +301,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
+
     </div>
   );
 };

@@ -1013,29 +1013,32 @@ export const agents = [
 export const blogPosts = [
   {
     id: 1,
-    title: "Market Trends: What to Expect in 2024",
-    excerpt: "Discover the latest real estate market trends and predictions for the upcoming year.",
-    image: "https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=600",
-    date: "December 15, 2023",
+    title: "Market Trends: What to Expect in 2025",
+    excerpt: "Discover the latest real estate market trends and predictions for the year.",
+    image: "https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/market%20insights.jpg",
+    date: "January 22, 2025",
     category: "Market Insights",
-    readTime: "5 min read"
+    link: "https://www.africahousingnews.com/17-strong-forecasts-for-real-estate-in-ghana-in-2025/",
+    readTime: "20 min read"
   },
   {
     id: 2,
     title: "First-Time Buyer's Complete Guide",
-    excerpt: "Everything you need to know about buying your first home, from financing to closing.",
+    excerpt: "Everything you need to know about buying your first home in Ghana, from financing to closing.",
     image: "https://www.globalpropertiesafrica.com/propertygallery/74648939243eb68f51eeef2a9bb4e4f3250f2a0fc.jpg",
-    date: "December 10, 2023",
+    date: "November 9, 2023",
     category: "Buying Tips",
-    readTime: "8 min read"
+    link: "https://thegreensgh.com/homebuying-in-ghana-for-first-time-buyers/",
+    readTime: "5 min read"
   },
   {
     id: 3,
     title: "Investment Properties: Maximizing ROI",
     excerpt: "Learn strategies for selecting and managing investment properties for optimal returns.",
-    image: "https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/t12.jfif",
-    date: "December 5, 2023",
+    image: "https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/Maximizing%20ROI.jpg",
+    date: "January 6, 2020",
     category: "Investment",
+    link: "https://www.forbes.com/councils/forbesrealestatecouncil/2020/01/06/six-strategies-for-maximizing-income-through-your-rental-property-investment/",
     readTime: "6 min read"
   }
 ];

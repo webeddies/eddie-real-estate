@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoFooter from "../../assets/eddie-logo-footer.png";
+
+
 import {
   Home as HomeIcon,
   Phone,
@@ -18,10 +21,16 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <HomeIcon className="h-8 w-8 text-sky-blue" />
-              <span className="text-2xl font-bold text-sky-blue">Eddie Realty</span>
-            </div>
+            <Link to="/" className="flex items-center space-x-2 h-16">
+              <div className="h-full w-auto flex items-center">
+                <img
+                  src={logoFooter}
+                  alt="Eddie Realty Logo"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
+            </Link>
+
             <p className="text-gray-300 leading-relaxed">
               Your trusted partner in Ghanaian luxury real estate. We deliver comfort, value, and exceptional service to help you find your dream home.
             </p>
@@ -37,21 +46,48 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-sky-blue">Quick Links</h3>
             <div className="space-y-2">
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Home</Link>
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Properties</Link>
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Our Agents</Link>
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Market Insights</Link>
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">About Us</Link>
+              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">
+                Home
+              </Link>
+              <Link to="/properties" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">
+                Properties
+              </Link>
+              <Link to="/agents" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">
+                Our Agents
+              </Link>
+              <Link to="/blog" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">
+                Market Insights
+              </Link>
+              <Link to="/about" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">
+                About Us
+              </Link>
             </div>
           </div>
+
 
           {/* Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-sky-blue">Services</h3>
             <div className="space-y-2">
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Property Buying</Link>
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Property Rental</Link>
-              <Link to="/" className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1">Property Selling</Link>
+              <Link
+                to="/buy"
+                className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1"
+              >
+                Property Buying
+              </Link>
+              <Link
+                to="/rent"
+                className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1"
+              >
+                Property Rental
+              </Link>
+              <Link
+                to="/sell"
+                className="block text-gray-300 hover:text-white transition-colors transition-transform duration-300 hover:translate-x-1"
+              >
+                Property Selling
+              </Link>
+
               <span
                 className="block text-gray-300 cursor-pointer transition-colors transition-transform duration-300 hover:text-white hover:translate-x-1"
                 onClick={() => { }}
@@ -64,7 +100,6 @@ const Footer: React.FC = () => {
               >
                 Investment Consulting
               </span>
-
             </div>
           </div>
 

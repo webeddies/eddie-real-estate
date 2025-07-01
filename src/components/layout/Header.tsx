@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ScheduleVisitModal from "../ui/ScheduleVisitModal";
+import logo from "../../assets/eddie-logo.png";
+
 
 import {
   Phone,
@@ -79,13 +81,20 @@ const Header: React.FC = () => {
         </div>
 
         {/* Main Navigation */}
-        <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur-sm py-4'}`}>
+        <nav className={`transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-1' : 'bg-white/95 backdrop-blur-sm py-2.5'}`}>
+
           <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <HomeIcon className="h-8 w-8 text-royal-blue" />
-              <span className="text-2xl font-bold text-royal-blue">Eddie Realty</span>
+            <Link to="/" className="flex items-center space-x-2 h-16 lg:h-20">
+              <div className="h-full w-auto flex items-center">
+                <img
+                  src={logo}
+                  alt="Eddie Realty Logo"
+                  className="h-full w-auto object-contain"
+                />
+              </div>
             </Link>
+
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">

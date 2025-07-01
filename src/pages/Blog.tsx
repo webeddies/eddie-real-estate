@@ -17,28 +17,27 @@ const Blog: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
       {/* Hero Section */}
-      <section className="relative py-20 min-h-[320px] flex items-center justify-center">
-        {/* Background image */}
-        <div
-          className="absolute inset-0 bg-center bg-cover opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80')" }}
+      <section
+        className="relative h-[65vh] bg-cover bg-center bg-no-repeat text-white flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url('https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/Real-Estate-Market-Trends-2025-Insights-from-a-Top-Industry-Leader-1024x585-1.webp')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
 
-          aria-hidden="true"
-        ></div>
-
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-        {/* Text content */}
-        <div className="relative max-w-4xl mx-auto px-4 text-center text-white">
+        {/* Text Content */}
+        <div className="relative z-10 text-center px-4 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
             Market Insights & Expert Advice
           </h1>
-          <p className="text-xl md:text-2xl font-light max-w-3xl mx-auto animate-fade-up-delay opacity-0">
+          <p className="text-lg md:text-xl text-gray-200 animate-fade-up-delay">
             Stay informed with the latest real estate trends, buying and selling tips, and market analysis from our expert team.
           </p>
         </div>
       </section>
+
 
 
       {/* Blog Stats */}
@@ -160,10 +159,16 @@ const Blog: React.FC = () => {
                   <p className="text-gray-600 text-lg leading-relaxed mb-6">
                     {featuredPost.excerpt}
                   </p>
-                  <button className="flex items-center space-x-2 text-royal-blue hover:text-blue-700 font-semibold transition-colors">
+                  <a
+                    href={featuredPost.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 text-royal-blue hover:text-blue-700 font-semibold transition-colors"
+                  >
                     <span>Read Full Article</span>
                     <ArrowRight size={18} />
-                  </button>
+                  </a>
+
                 </div>
               </div>
 
@@ -198,10 +203,16 @@ const Blog: React.FC = () => {
                       <p className="text-gray-600 mb-4 leading-relaxed">
                         {post.excerpt}
                       </p>
-                      <button className="flex items-center space-x-2 text-royal-blue hover:text-blue-700 font-medium transition-colors">
+                      <a
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-royal-blue hover:text-blue-700 font-medium transition-colors"
+                      >
                         <span>Read More</span>
                         <ArrowRight size={16} />
-                      </button>
+                      </a>
+
                     </div>
                   </article>
                 ))}

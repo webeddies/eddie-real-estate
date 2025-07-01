@@ -64,38 +64,44 @@ const Sell: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
       {/* Hero Section */}
-      <section className="relative text-white py-28 md:py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <div
-            className="w-full h-full bg-cover bg-center"
-            style={{
-              backgroundImage: 'url(https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u4.jfif)',
-            }}
-          />
-        </div>
+      <section
+        className="relative text-white py-28 md:py-32 overflow-hidden bg-[#1b2e4f]" // <-- fallback color
+      >
+        {/* Background image layer */}
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500"
+          style={{
+            backgroundImage:
+              "url('https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u4.jfif')",
+          }}
+        />
 
-        <div className="relative max-w-7xl mx-auto px-4 text-center">
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           {/* Animated Title */}
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 1.2,
-              ease: [0.25, 0.46, 0.45, 0.94], // Similar to ease-out-quart
+              ease: [0.25, 0.46, 0.45, 0.94],
             }}
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-sky-200 text-transparent bg-clip-text drop-shadow-md"
           >
             Sell Your Property with <span className="text-sky-blue">Eddie Realty</span>
           </motion.h1>
 
-          {/* Animated Buttons */}
+          {/* Animated CTA */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               delay: 0.5,
               duration: 1.2,
-              ease: [0.25, 0.46, 0.45, 0.94], // Smooth easing
+              ease: [0.25, 0.46, 0.45, 0.94],
             }}
           >
             <button
@@ -107,6 +113,7 @@ const Sell: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
 
       {/* --- Testimonials Carousel  */}
       <section
