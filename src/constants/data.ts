@@ -1048,7 +1048,7 @@ export const propertyCategories = [
     name: "Apartments",
     icon: "Building2",
     description: "Modern apartments in prime locations",
-    count: 17,
+    count: 16,
     types: ["Apartments"]
   },
   {
@@ -1056,7 +1056,7 @@ export const propertyCategories = [
     name: "Houses",
     icon: "Home",
     description: "Family homes and luxury estates",
-    count: 30,
+    count: 31,
     types: ["Luxury Homes", "Private Homes"] // 👈 MULTIPLE types
   },
   {
