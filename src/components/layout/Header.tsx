@@ -50,7 +50,9 @@ const Header: React.FC = () => {
       {/* --- Header --- */}
       <header className="fixed w-full top-0 z-50 transition-all duration-300">
         {/* Top Bar */}
-        <div className="bg-royal-blue text-white py-2 px-4 hidden md:block">
+        <div className="py-2 px-4 hidden md:block bg-gradient-to-br from-blue-900 via-royal-blue to-sky-500 text-white">
+          
+           
           <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
             <div className="flex items-center space-x-6">
               <a

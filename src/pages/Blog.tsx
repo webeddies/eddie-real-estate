@@ -4,9 +4,9 @@ import { blogPosts } from '../constants/data';
 import { Link } from 'react-router-dom';
 const Blog: React.FC = () => {
   const categories = [
-    { name: 'All Posts', count: 8, active: true },
-    { name: 'Market Insights', count: 2, active: false },
-    { name: 'Buying Tips', count: 2, active: false },
+    { name: 'All Posts', count: 11, active: true },
+    { name: 'Market Insights', count: 4, active: false },
+    { name: 'Buying Tips', count: 3, active: false },
     { name: 'Selling Tips', count: 2, active: false },
     { name: 'Investment', count: 2, active: false }
   ];
@@ -49,7 +49,7 @@ const Blog: React.FC = () => {
                 <BookOpen className="text-royal-blue" size={24} />
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">20+</div>
+                <div className="text-2xl font-bold text-gray-900">10+</div>
                 <p className="text-gray-600">Articles Published</p>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Blog: React.FC = () => {
                 <TrendingUp className="text-royal-blue" size={24} />
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">Weekly</div>
+                <div className="text-2xl font-bold text-gray-900">Monthly</div>
                 <p className="text-gray-600">New Content</p>
               </div>
             </div>

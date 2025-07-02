@@ -174,7 +174,7 @@ const Buy: React.FC = () => {
       </section>
 
       {/* Statistics */}
-      <section className="py-20 bg-royal-blue text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-royal-blue to-sky-500 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Buying Success</h2>

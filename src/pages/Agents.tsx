@@ -20,7 +20,7 @@ const Agents: React.FC = () => {
         {/* Text Content */}
         <div className="relative z-10 text-center px-4 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-up">
-            Connect with Ghana’s Top Real Estate Agents
+            Connect with Ghana’s Finest Real Estate Agents
           </h1>
           <p className="text-lg md:text-xl text-gray-200 animate-fade-up-delay">
             Our trusted agents combine local expertise with a passion for helping you buy, sell, or invest in Ghana’s best properties.
