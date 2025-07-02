@@ -205,10 +205,10 @@ const Buy: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Find Your Dream Home?
+            Your Dream Home is Closer Than You Think
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Let our experienced team guide you through the entire buying process and help you secure the perfect property in Ghana.
+            Explore the best of Ghana’s property market with a team that knows how to get you there.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact#contact-form" className="w-full sm:w-auto">

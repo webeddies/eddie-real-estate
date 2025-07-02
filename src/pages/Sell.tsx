@@ -50,7 +50,7 @@ const Sell: React.FC = () => {
     {
       icon: TrendingUp,
       title: "Strategic Marketing",
-      description: "Comprehensive marketing campaign designed to attract worthy buyers and maximize exposure.",
+      description: "Extensive marketing campaign designed to attract worthy buyers and maximize exposure.",
       features: ["Professional photography", "Online listings", "Social media promotion"]
     },
     {
@@ -351,10 +351,10 @@ const Sell: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Sell Your Property?
+            Ready to Put Your Property on the Market?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Get started with a free property valuation and discover how much your property is worth in today's market.
+            Start with a free valuation and see what today’s buyers are willing to pay.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

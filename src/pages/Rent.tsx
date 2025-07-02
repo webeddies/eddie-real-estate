@@ -212,7 +212,7 @@ const Rent: React.FC = () => {
                 Why Choose Eddie Realty for Renting?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                With our in-depth local knowledge and streamlined process, we help you rent the perfect home without stress.
+                We assist you in renting the ideal house stress-free, thanks to our extensive local knowledge and smooth procedure.
               </p>
               <div className="space-y-4">
                 {[
@@ -296,10 +296,10 @@ const Rent: React.FC = () => {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Find Your Next Home or Commercial Space?
+            Your Next Space is Just a Click Away
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Browse our extensive collection of rental properties and let our team help you find the perfect place to rent.
+            Browse rentals that suit your lifestyle or business needs. We’ll help you get the keys.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/properties?status=For Rent">

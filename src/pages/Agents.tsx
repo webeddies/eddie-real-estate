@@ -94,13 +94,14 @@ const Agents: React.FC = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Ready to Work with Our Team?
+            Talk to Us Today
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Contact us today to connect with the right agent for your specific needs and location.
+            Reach out now and let our trusted agents guide you every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

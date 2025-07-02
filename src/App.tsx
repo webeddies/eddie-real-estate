@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
+import AllBlogs from './pages/AllBlogs';
 
 import Home from './pages/Home';
 import Properties from './pages/Properties';
@@ -47,6 +48,7 @@ function App() {
               <Route path="/sell" element={<Sell />} />
               <Route path="/agents" element={<Agents />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/all" element={<AllBlogs />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

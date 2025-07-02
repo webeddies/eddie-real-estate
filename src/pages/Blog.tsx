@@ -1,18 +1,18 @@
 import React from 'react';
 import { Calendar, Clock, ArrowRight, TrendingUp, BookOpen, Users } from 'lucide-react';
 import { blogPosts } from '../constants/data';
-
+import { Link } from 'react-router-dom';
 const Blog: React.FC = () => {
   const categories = [
-    { name: 'All Posts', count: 24, active: true },
-    { name: 'Market Insights', count: 8, active: false },
-    { name: 'Buying Tips', count: 6, active: false },
-    { name: 'Selling Tips', count: 5, active: false },
-    { name: 'Investment', count: 5, active: false }
+    { name: 'All Posts', count: 8, active: true },
+    { name: 'Market Insights', count: 2, active: false },
+    { name: 'Buying Tips', count: 2, active: false },
+    { name: 'Selling Tips', count: 2, active: false },
+    { name: 'Investment', count: 2, active: false }
   ];
 
   const featuredPost = blogPosts[0];
-  const regularPosts = blogPosts.slice(1);
+  const regularPosts = blogPosts.slice(1, 3);
 
   return (
     <div className="min-h-screen bg-gray-50 font-poppins">
@@ -220,9 +220,12 @@ const Blog: React.FC = () => {
 
               {/* Load More */}
               <div className="text-center mt-12">
-                <button className="bg-royal-blue text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                  Load More Articles
-                </button>
+                <a
+                  href="/allblogs"
+                  className="bg-royal-blue text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  View All Articles
+                </a>
               </div>
             </div>
           </div>

@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
     },
     {
       question: "How do you determine property values?",
-      answer: "We use comprehensive market analysis, recent comparable sales, current market conditions, and property-specific factors to provide accurate valuations."
+      answer: "We use comprehensive market analysis, recent comparable sales, current market conditions, and property-specific factors, as well as legal and regulatory considerations to provide accurate valuations."
     },
     {
       question: "What's your commission structure?",
