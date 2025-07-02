@@ -61,7 +61,7 @@ const Buy: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6, duration: 1.2, ease: 'easeOut' }}
+            transition={{ delay: 0.5, duration: 1.2, ease: 'easeOut' }}
           >
             <Link to="/properties?status=For Sale">
               <button className="mt-8 text-lg font-semibold px-8 py-3 rounded-lg bg-white/10 border border-white text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-200 hover:bg-white hover:text-royal-blue hover:bg-clip-border transition-colors duration-300">

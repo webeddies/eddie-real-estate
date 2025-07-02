@@ -72,7 +72,7 @@ const Home: React.FC = () => {
               Featured Properties
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Discover our handpicked selection of premium properties that offer exceptional value and luxury living in Ghana.
+              Explore our curated collection of top-tier properties designed for comfort, style, and exceptional value across Ghana.
             </p>
           </div>
 
@@ -113,7 +113,7 @@ const Home: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Guidance</h3>
               <p className="text-gray-600">
-                Over 10 years of experience in luxury real estate, providing you with unmatched expertise and market insights.
+                With over a decade of experience in luxury real estate, we provide you with unmatched expertise and market insights.
               </p>
             </div>
 
