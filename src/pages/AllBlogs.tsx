@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { blogPosts } from '../constants/data';
 
 const AllBlogs: React.FC = () => {
-  const [visibleCount, setVisibleCount] = useState(6); // Show 6 blogs initially
+  const [visibleCount, setVisibleCount] = useState(blogPosts.length);
+  // Show 6 blogs initially
 
   const loadMore = () => setVisibleCount(prev => prev + 6);
 
@@ -51,17 +52,7 @@ const AllBlogs: React.FC = () => {
         ))}
       </div>
 
-      {visibleCount < blogPosts.length && (
-        <div className="text-center mt-12">
-          <a
-            href="/allblogs"
-            className="bg-royal-blue text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-          >
-            View All Articles
-          </a>
-        </div>
 
-      )}
     </div>
   );
 };

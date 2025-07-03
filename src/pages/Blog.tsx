@@ -4,9 +4,9 @@ import { blogPosts } from '../constants/data';
 import { Link } from 'react-router-dom';
 const Blog: React.FC = () => {
   const categories = [
-    { name: 'All Posts', count: 11, active: true },
-    { name: 'Market Insights', count: 4, active: false },
-    { name: 'Buying Tips', count: 3, active: false },
+    { name: 'All Posts', count: 8, active: true },
+    { name: 'Market Insights', count: 2, active: false },
+    { name: 'Buying Tips', count: 2, active: false },
     { name: 'Selling Tips', count: 2, active: false },
     { name: 'Investment', count: 2, active: false }
   ];
@@ -49,7 +49,7 @@ const Blog: React.FC = () => {
                 <BookOpen className="text-royal-blue" size={24} />
               </div>
               <div>
-                <div className="text-2xl font-bold text-gray-900">10+</div>
+                <div className="text-2xl font-bold text-gray-900">8</div>
                 <p className="text-gray-600">Articles Published</p>
               </div>
             </div>
@@ -220,12 +220,13 @@ const Blog: React.FC = () => {
 
               {/* Load More */}
               <div className="text-center mt-12">
-                <a
-                  href="/allblogs"
+                <Link
+                  to="/allblogs"
                   className="bg-royal-blue text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
                 >
                   View All Articles
-                </a>
+                </Link>
+
               </div>
             </div>
           </div>
