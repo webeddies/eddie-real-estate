@@ -81,7 +81,7 @@ const Buy: React.FC = () => {
               Our Simple 3-Step Process
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We've streamlined the buying process to make it as smooth and stress-free as possible for you.
+              We have streamlined the buying process to make it as smooth and stress-free as possible for you.
             </p>
           </div>
 

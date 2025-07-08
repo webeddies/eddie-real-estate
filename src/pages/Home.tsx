@@ -102,7 +102,7 @@ const Home: React.FC = () => {
               More Than Real Estate—It’s About People
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              At Eddie Realty, we build lasting relationships, not just transactions. You’ll feel the difference in how we work with you.
+              At Eddie Realty, we build lasting relationships, not just transactions. From start to finish, we provide the advice and support you can rely on.
             </p>
           </div>
 

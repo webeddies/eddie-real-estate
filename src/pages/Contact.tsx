@@ -51,7 +51,7 @@ const Contact: React.FC = () => {
     },
     {
       question: "What's your commission structure?",
-      answer: "Our commission rates are competitive and vary based on the property type and transaction complexity. We'll discuss this transparently during our initial consultation."
+      answer: "Our commission rates are competitive and vary based on the property type and transaction complexity. We would discuss this transparently during our initial consultation."
     },
     {
       question: "How long does it typically take to sell a property?",

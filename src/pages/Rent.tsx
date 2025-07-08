@@ -103,7 +103,7 @@ const Rent: React.FC = () => {
               Your Rental Journey in 3 Easy Steps
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              From search to signing, we’ve made renting in Ghana transparent, quick, and convenient.
+              From search to signing, we have made renting in Ghana transparent, quick, and convenient.
             </p>
           </div>
 
@@ -299,7 +299,7 @@ const Rent: React.FC = () => {
             Your Next Space is Just a Click Away
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Browse rentals that suit your lifestyle or business needs. We’ll help you get the keys.
+            Browse rentals that suit your lifestyle or business needs. We would help you get the keys.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/properties?status=For Rent">
