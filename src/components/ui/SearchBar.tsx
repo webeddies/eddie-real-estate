@@ -55,7 +55,6 @@ const SearchBar: React.FC = () => {
             )}
             <select
               className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
-
               value={searchData.propertyType}
               onChange={(e) => handleInputChange('propertyType', e.target.value)}
             >
@@ -66,6 +65,7 @@ const SearchBar: React.FC = () => {
               <option value="Commercial">Commercial</option>
               <option value="Short Stays">Short Stays</option>
             </select>
+
 
           </div>
         </div>
@@ -79,7 +79,6 @@ const SearchBar: React.FC = () => {
             )}
             <select
               className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
-
               value={searchData.priceRange}
               onChange={(e) => handleInputChange('priceRange', e.target.value)}
             >
@@ -102,7 +101,6 @@ const SearchBar: React.FC = () => {
             )}
             <select
               className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
-
               value={searchData.bedrooms}
               onChange={(e) => handleInputChange('bedrooms', e.target.value)}
             >
@@ -113,6 +111,7 @@ const SearchBar: React.FC = () => {
               <option value="4">4+ Beds</option>
               <option value="5">5+ Beds</option>
             </select>
+
           </div>
         </div>
         {/* Search Button */}
