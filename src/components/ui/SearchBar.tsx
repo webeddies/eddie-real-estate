@@ -34,7 +34,8 @@ const SearchBar: React.FC = () => {
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-700">Location</label>
           <div className="relative">
-            <MapPin size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            <MapPin size={18} className="hidden md:block absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+            />
             <input
               type="text"
               placeholder="City, Region"
@@ -51,7 +52,10 @@ const SearchBar: React.FC = () => {
           <label className="block text-sm font-medium text-gray-700">Property Type</label>
           <div className="relative">
             {searchData.propertyType === '' && (
-              <Home size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+              <Home
+                size={18}
+                className="hidden md:block absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              />
             )}
             <select
               className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
@@ -75,7 +79,8 @@ const SearchBar: React.FC = () => {
           <label className="block text-sm font-medium text-gray-700">Budget Range</label>
           <div className="relative">
             {searchData.priceRange === '' && (
-              <DollarSign size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+              <DollarSign size={18} className="hidden md:block absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              />
             )}
             <select
               className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
@@ -97,7 +102,8 @@ const SearchBar: React.FC = () => {
           <label className="block text-sm font-medium text-gray-700">Bedrooms</label>
           <div className="relative">
             {searchData.bedrooms === '' && (
-              <Bed size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+              <Bed size={18} className="hidden md:block absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+              />
             )}
             <select
               className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
