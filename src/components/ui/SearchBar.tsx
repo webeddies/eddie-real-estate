@@ -54,7 +54,8 @@ const SearchBar: React.FC = () => {
               <Home size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
             )}
             <select
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+
               value={searchData.propertyType}
               onChange={(e) => handleInputChange('propertyType', e.target.value)}
             >
@@ -77,7 +78,8 @@ const SearchBar: React.FC = () => {
               <DollarSign size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
             )}
             <select
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+
               value={searchData.priceRange}
               onChange={(e) => handleInputChange('priceRange', e.target.value)}
             >
@@ -99,7 +101,8 @@ const SearchBar: React.FC = () => {
               <Bed size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
             )}
             <select
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+
               value={searchData.bedrooms}
               onChange={(e) => handleInputChange('bedrooms', e.target.value)}
             >
