@@ -45,11 +45,12 @@ const SearchBar: React.FC = () => {
           </div>
         </div>
 
-        {/* Property Type */}
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-700">Property Type</label>
           <div className="relative">
-            <Home size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            {searchData.propertyType === '' && (
+              <Home size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+            )}
             <select
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
               value={searchData.propertyType}
@@ -69,7 +70,9 @@ const SearchBar: React.FC = () => {
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-700">Budget Range</label>
           <div className="relative">
-            <DollarSign size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            {searchData.priceRange === '' && (
+              <DollarSign size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+            )}
             <select
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
               value={searchData.priceRange}
@@ -89,7 +92,9 @@ const SearchBar: React.FC = () => {
         <div className="space-y-2">
           <label className="block text-sm font-medium text-gray-700">Bedrooms</label>
           <div className="relative">
-            <Bed size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            {searchData.bedrooms === '' && (
+              <Bed size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none" />
+            )}
             <select
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
               value={searchData.bedrooms}
@@ -104,7 +109,6 @@ const SearchBar: React.FC = () => {
             </select>
           </div>
         </div>
-
         {/* Search Button */}
         <div>
           <button
