@@ -21,21 +21,34 @@ const Blog: React.FC = () => {
       <section
         className="relative h-[65vh] bg-cover bg-center bg-no-repeat text-white flex items-center"
         style={{
-          backgroundImage: "url('https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/Real-Estate-Market-Trends-2025-Insights-from-a-Top-Industry-Leader-1024x585-1.webp')",
+          backgroundImage:
+            "url('https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/Real-Estate-Market-Trends-2025-Insights-from-a-Top-Industry-Leader-1024x585-1.webp')",
         }}
       >
-        <div className="absolute inset-0" style={{ backgroundColor: '#2C3E50CC' }}></div>
+        {/* Overlay */}
+         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 text-left text-white px-4 max-w-7xl mx-auto w-full">
-          <div className="inline-block">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
+          {/* Title + underline (left aligned) */}
+          <div className="inline-block mb-6 -mt-6">
             <h1 className="text-2xl md:text-3xl font-medium text-white uppercase">
               Market Insights & Expert Advice
             </h1>
-            <div className="h-0.5 mt-3 bg-white" style={{ width: "50%" }}></div>
+            <div
+              className="h-0.5 mt-3 bg-white"
+              style={{ width: "50%" }}
+            ></div>
+          </div>
+
+          {/* Subtitle (centered on its own line) */}
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-white/90 font-light animate-fade-up-delay">
+              Featured news & insights from property professionals on property in Ghana and beyond.
+            </p>
           </div>
         </div>
-
       </section>
+
 
       {/* Blog Stats */}
       <section className="py-12 bg-white border-b">
@@ -61,7 +74,7 @@ const Blog: React.FC = () => {
                 <Users size={24} style={{ color: '#B8960F' }} />
               </div>
               <div>
-                <div className="text-2xl font-bold" style={{ color: '#2C3E50' }}>300+</div>
+                <div className="text-2xl font-bold" style={{ color: '#2C3E50' }}>30+</div>
                 <p className="text-gray-600 font-light">Monthly Readers</p>
               </div>
             </div>
@@ -284,9 +297,10 @@ const Blog: React.FC = () => {
                 <Link to="/allblogs">
                   <button
                     className="inline-flex items-center space-x-2 font-semibold transition-all duration-300 px-6 py-3 text-white transform hover:scale-95"
-                    style={{ 
+                    style={{
                       backgroundColor: '#B8960F',
-                      borderRadius: '0px' }}
+                      borderRadius: '0px'
+                    }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A67C00'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B8960F'}
                   >

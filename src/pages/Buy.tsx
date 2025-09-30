@@ -42,9 +42,10 @@ const Buy: React.FC = () => {
             className="w-full h-full bg-cover bg-center"
             style={{
               backgroundImage:
-                "url(https://anaarkutu.com/wp-content/uploads/2022/04/DJI_0410-1.jpg)",
+                "url(https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/12-cover.jfif)",
             }}
           />
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
         {/* Content */}
@@ -53,7 +54,7 @@ const Buy: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut" }} // ✅ same as Rent
+            transition={{ duration: 1.5, ease: "easeOut" }}  
             className="text-left"
           >
             <h1 className="text-2xl md:text-3xl font-medium text-white uppercase inline-block relative">
@@ -69,7 +70,7 @@ const Buy: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }} // ✅ same as Rent
+            transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}  
             className="flex justify-center"
           >
             <Link to="/properties?status=For Sale">
@@ -205,7 +206,7 @@ const Buy: React.FC = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: "url('https://raw.githubusercontent.com/webeddies/Real-Estate-Agents/refs/heads/main/client%20agent%20view.png')"
+                backgroundImage: "url('https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/cover-13.jfif')"
               }}
             />
             <div className="absolute inset-0" style={{ backgroundColor: '#2C3E5060' }}></div>

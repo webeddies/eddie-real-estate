@@ -50,7 +50,7 @@ const Sell: React.FC = () => {
           className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-500"
           style={{
             backgroundImage:
-              "url('https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u4.jfif')",
+              "url('https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/cover-7.jfif')",
           }}
         />
 
@@ -193,7 +193,7 @@ const Sell: React.FC = () => {
         className="relative bg-fixed bg-center bg-cover py-28 md:py-32"
         style={{
           backgroundImage:
-            "url('https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/real%20estate%20ghana.jpg')",
+            "url('https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/o1.jfif')",
         }}
       >
         <div className="absolute inset-0 bg-black/40 z-0" />
@@ -403,7 +403,7 @@ const Sell: React.FC = () => {
       {/* Updated CTA Section with Sharp Edges */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#2C3E50' }}>
+          <h2 className="text-2xl md:text-3xl font-bold mb-6" style={{ color: '#2C3E50' }}>
             Evaluate. Market. Negotiate.
           </h2>
           <p className="text-lg text-gray-600 mb-8 font-light">

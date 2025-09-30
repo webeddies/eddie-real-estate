@@ -121,6 +121,8 @@ const Rent: React.FC = () => {
               backgroundImage: 'url(https://www.edenoasisrealty.com/wp-content/uploads/2024/12/DJI_0533.jpg)',
             }}
           />
+          <div className="absolute inset-0 bg-black/40"></div>
+          
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">

@@ -69,8 +69,8 @@ const Contact: React.FC = () => {
             backgroundImage: "url('https://raw.githubusercontent.com/webeddies/real-estate-items-/refs/heads/main/contact%20us.jpg')",
           }}
         />
-
-
+          
+          <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-left text-white px-4 max-w-7xl mx-auto w-full">
           <h1 className="text-2xl md:text-3xl font-medium text-white uppercase">
             Contact Us

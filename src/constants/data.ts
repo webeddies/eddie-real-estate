@@ -1,16 +1,16 @@
 export const properties = [
   {
     id: 1,
-    title: "Luxury Villa with Riverside View",
-    price: "$415,000",
-    location: "Akosombo",
+    title: "Luxe Loft Living",
+    price: "$385,000",
+    location: "North Legon, Accra",
     bedrooms: 4,
     bathrooms: 4,
-    area: "350 sq m",
-    image: "https://anaarkutu.com/wp-content/uploads/2022/04/DJI_0410-1.jpg",
+    area: "305 sq m",
+    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/o1.jfif",
     status: "For Sale",
     propertyType: "Luxury Homes",
-    featured: true
+    featured: false
   },
   {
     id: 2,
@@ -117,17 +117,18 @@ export const properties = [
     featured: false
   },
   {
+    
     id: 10,
-    title: "Luxe Loft Living",
-    price: "$385,000",
-    location: "North Legon, Accra",
+    title: "Luxury Villa with Riverside View",
+    price: "$415,000",
+    location: "Akosombo",
     bedrooms: 4,
     bathrooms: 4,
-    area: "305 sq m",
-    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/o1.jfif",
+    area: "350 sq m",
+    image: "https://anaarkutu.com/wp-content/uploads/2022/04/DJI_0410-1.jpg",
     status: "For Sale",
     propertyType: "Luxury Homes",
-    featured: false
+    featured: true
   },
   {
     id: 11,
@@ -960,7 +961,7 @@ export const agents = [
     experience: "13 Years",
     specialties: ["Luxury Homes", "Investment Properties", "Land Broker"],
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/agent%204.jpg",
-    phone: "+1 (555) 987 6522/ +233 (0) 504 923 755",
+    phone: "+1 (555) 987 6522/ +233 (0) 506 878 112",
     email: "lawcobbinah600@eddierealty.com",
     listings: 19
   },
@@ -971,7 +972,7 @@ export const agents = [
     experience: "7 Years",
     specialties: ["Family Homes", "Apartments", "First-time Buyers"],
     image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%203.jpg",
-    phone: "+44 (0)7123 456 789/ +233 (0) 204 313 728",
+    phone: "+44 (0)7123 456 789/ +233 (0) 24 993 713",
     email: "phaella55@eddierealty.com",
     listings: 27
   },
