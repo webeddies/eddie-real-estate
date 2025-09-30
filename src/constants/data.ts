@@ -36,7 +36,7 @@ export const properties = [
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/island%20property.jpg",
     status: "For Sale",
     propertyType: "Luxury Homes",
-    featured: true
+    featured: false
   },
   {
     id: 4,
@@ -809,7 +809,7 @@ export const properties = [
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/v1.jfif",
     status: "For Rent",
     propertyType: "Commercial",
-    featured: false
+    featured: true
   },
   {
     id: 64,
@@ -972,7 +972,7 @@ export const agents = [
     experience: "7 Years",
     specialties: ["Family Homes", "Apartments", "First-time Buyers"],
     image: "https://raw.githubusercontent.com/Webeddies/Real-Estate-Agents/refs/heads/main/agent%203.jpg",
-    phone: "+44 (0)7123 456 789/ +233 (0) 24 993 713",
+    phone: "+44 (0)7123 456 789/ +233 (0) 241 993 713",
     email: "phaella55@eddierealty.com",
     listings: 27
   },
