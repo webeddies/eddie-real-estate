@@ -164,7 +164,7 @@ export const properties = [
     bedrooms: 2,
     bathrooms: 2,
     area: "330 sq m",
-    image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s7.jpg",
+    image: "https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/10-cover.jfif",
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
