@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ScheduleVisitModal from "../ui/ScheduleVisitModal";
-import logo from "../../assets/eddie-logo.png";
+import logo from "../../assets/edi-logo.png";
 
 import {
   Phone,

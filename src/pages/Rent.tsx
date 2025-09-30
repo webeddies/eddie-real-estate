@@ -1,10 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CheckCircle, Search, Eye, FileCheck, ArrowRight, Home, Shield, Clock, Users, Award, Headphones } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useRef } from 'react';
+import ScheduleVisitModal from '../components/ui/ScheduleVisitModal';
 
 const Rent: React.FC = () => {
+  const [showVisitModal, setShowVisitModal] = useState(false);
+  const navigate = useNavigate();
+  const [searchData, setSearchData] = useState({
+    location: '',
+    propertyType: '',
+    priceRange: '',
+    bedrooms: ''
+  });
+
+  const handleInputChange = (field: string, value: string) => {
+    setSearchData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSearch = () => {
+    const queryParams = new URLSearchParams();
+    queryParams.append('status', 'For Rent');
+
+    if (searchData.location) queryParams.append('location', searchData.location);
+    if (searchData.propertyType) queryParams.append('propertyType', searchData.propertyType);
+    if (searchData.priceRange) queryParams.append('priceRange', searchData.priceRange);
+    if (searchData.bedrooms) queryParams.append('bedrooms', searchData.bedrooms);
+
+    const searchUrl = `/properties?${queryParams.toString()}`;
+    navigate(searchUrl);
+  };
+
   const steps = [
     {
       title: "Browse & Filter",
@@ -81,6 +107,11 @@ const Rent: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 font-transact">
+      {/* Schedule Visit Modal */}
+      {showVisitModal && (
+        <ScheduleVisitModal onClose={() => setShowVisitModal(false)} />
+      )}
+
       {/* Hero Section */}
       <section className="relative text-white py-28 md:py-32 overflow-hidden">
         <div className="absolute inset-0">
@@ -117,9 +148,9 @@ const Rent: React.FC = () => {
             className="flex justify-center"
           >
             <Link to="/properties?status=For Rent">
-              <button 
+              <button
                 className="mt-8 text-lg font-semibold px-8 py-4 border-2 transition-all duration-300 transform hover:scale-95"
-                style={{ 
+                style={{
                   borderColor: '#B8960F',
                   color: 'white',
                   backgroundColor: 'rgba(255,255,255,0.1)',
@@ -171,7 +202,7 @@ const Rent: React.FC = () => {
                   <div className="absolute inset-0" style={{ backgroundColor: '#2C3E5080' }} />
 
                   <div className="relative z-10 text-white p-8 h-full flex flex-col justify-between">
-                    <div 
+                    <div
                       className="w-12 h-12 flex items-center justify-center mb-4 mx-auto transition-all duration-300 group-hover:scale-110"
                     >
                     </div>
@@ -203,31 +234,30 @@ const Rent: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {rentalTypes.map((type, index) => {
-              // Icon mapping based on type
               const getIcon = () => {
-                switch(type.title) {
+                switch (type.title) {
                   case "Luxury Properties":
                     return (
                       <svg className="w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M3 21h18M5 21V7l8-4v18M19 21V10l-6-3M9 9v.01M9 12v.01M9 15v.01M9 18v.01" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 21h18M5 21V7l8-4v18M19 21V10l-6-3M9 9v.01M9 12v.01M9 15v.01M9 18v.01" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     );
                   case "Condos/ Apartments":
                     return (
                       <svg className="w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M3 21h18M4 18h16M4 18V9l8-6 8 6v9M9 21v-7h6v7M9 6h.01M12 6h.01M15 6h.01M12 12h.01M9 12h.01M15 12h.01" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 21h18M4 18h16M4 18V9l8-6 8 6v9M9 21v-7h6v7M9 6h.01M12 6h.01M15 6h.01M12 12h.01M9 12h.01M15 12h.01" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     );
                   case "Short-Term Stays":
                     return (
                       <svg className="w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M3 21h18M5 21V5h14v16M9 6v.01M9 9v.01M9 12v.01M15 6v.01M15 9v.01M15 12v.01M9 16h6" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 21h18M5 21V5h14v16M9 6v.01M9 9v.01M9 12v.01M15 6v.01M15 9v.01M15 12v.01M9 16h6" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     );
                   case "Commercial Spaces":
                     return (
                       <svg className="w-12 h-12 mx-auto" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                        <path d="M3 21h18M5 21V7h14v14M9 7V4h6v3M8 11h8M8 15h8" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M3 21h18M5 21V7h14v14M9 7V4h6v3M8 11h8M8 15h8" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     );
                   default:
@@ -248,36 +278,31 @@ const Rent: React.FC = () => {
                     boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
                   }}
                 >
-                  {/* Shimmer effect on hover */}
-                  <div 
+                  <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{
                       background: 'linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%)',
                       animation: 'shimmer 2s infinite'
                     }}
                   />
-                  
+
                   <div className="relative p-8">
-                    {/* Icon */}
                     <div className="text-white mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                       {getIcon()}
                     </div>
 
-                    {/* Title */}
                     <h3 className="text-xl font-semibold mb-3 text-center text-white">
                       {type.title}
                     </h3>
 
-                    {/* Description */}
                     <p className="text-white/80 text-center mb-6 font-light text-sm">
                       {type.description}
                     </p>
 
-                    {/* Features */}
                     <div className="space-y-2 mb-6">
                       {type.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <div 
+                          <div
                             className="w-1.5 h-1.5 rounded-full flex-shrink-0"
                             style={{ backgroundColor: '#B8960F' }}
                           />
@@ -286,7 +311,6 @@ const Rent: React.FC = () => {
                       ))}
                     </div>
 
-                    {/* Price Range */}
                     <div className="text-center pt-4 border-t border-white/20">
                       <span className="font-semibold text-sm" style={{ color: '#B8960F' }}>
                         {type.priceRange}
@@ -294,8 +318,7 @@ const Rent: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Bottom glow effect */}
-                  <div 
+                  <div
                     className="absolute bottom-0 left-0 right-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{
                       background: 'linear-gradient(90deg, transparent, #B8960F, transparent)'
@@ -307,7 +330,6 @@ const Rent: React.FC = () => {
           </div>
         </div>
 
-        {/* Shimmer animation */}
         <style>{`
           @keyframes shimmer {
             0% {
@@ -335,11 +357,11 @@ const Rent: React.FC = () => {
               </h2>
               <div className="space-y-5 text-gray-700 font-light leading-relaxed">
                 <p className="text-base">
-                  At Eddie Realty, rentals and property management are at the core of what we do across Ghana. As a rental agency deeply rooted in the local market, we understand the intricacies of keeping both landlords and tenants happy – a task that's no small feat in Ghana's dynamic property landscape.
+                  At Eddie Realty, rentals and property management are at the core of what we do across
+                  Ghana. As a rental agency deeply rooted in the local market, we understand the
+                  intricacies of keeping both landlords and tenants happy; a task that's no small feat in Ghana's dynamic property landscape.
                 </p>
-                <p className="text-base">
-                  Our commitment goes beyond the ordinary. We assist you in renting the ideal property stress-free, thanks to our extensive local knowledge and smooth procedures. Managing properties is time-consuming, demanding 24/7 availability and seamless collaboration with various third parties. We recognize the challenges unique to the Ghanaian market, and we thrive on overcoming them.
-                </p>
+
                 <p className="text-base">
                   Why choose us? Because we handle it all! From comprehensive tenant services and flexible viewing schedules to seamless coordination with external partners and transparent documentation with no hidden fees, we've got you covered. Our fast and secure rental processing ensures you can move into your new space without unnecessary delays, while our dedicated support team remains available every step of the way.
                 </p>
@@ -347,18 +369,17 @@ const Rent: React.FC = () => {
                   Rent with us and experience property management done right. We take the stress out of finding and securing your perfect rental so you can enjoy the benefits without the hassle.
                 </p>
               </div>
-              
-              <Link to="/properties?status=For Rent">
-                <button
-                  className="mt-8 inline-flex items-center gap-2 font-semibold px-8 py-3.5 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-                  style={{ backgroundColor: '#B8960F', color: 'white', borderRadius: '0px' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A67C00'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B8960F'}
-                >
-                  Rent With Us
-                  <ArrowRight size={20} />
-                </button>
-              </Link>
+
+              <button
+                onClick={() => setShowVisitModal(true)}
+                className="mt-8 inline-flex items-center gap-2 font-semibold px-8 py-3.5 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                style={{ backgroundColor: '#B8960F', color: 'white', borderRadius: '0px' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A67C00'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B8960F'}
+              >
+                Rent With Us
+                <ArrowRight size={20} />
+              </button>
             </motion.div>
 
             <motion.div
@@ -379,78 +400,133 @@ const Rent: React.FC = () => {
         </div>
       </section>
 
-      {/* Rental Features Section - Replacing Statistics */}
-      <section 
-        className="py-20 text-white"
-        style={{ backgroundColor: '#2C3E50' }}
-      >
-        <div className="max-w-7xl mx-auto px-4">
+
+
+      {/* Rental Search Section - Updated */}
+      <section className="py-20 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: 'url(https://raw.githubusercontent.com/webeddies/Properties/refs/heads/main/06-cover.jpg)',
+            }}
+          />
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(44, 62, 80, 0.85)' }} />
+        </div>
+
+        <div className="relative max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Rent With Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Explore Rental Options</h2>
             <p className="text-white/90 text-lg font-light max-w-2xl mx-auto">
-              We provide comprehensive rental services that prioritize your comfort, security, and peace of mind
+              Search through our curated selection of rental properties across Ghana
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {rentalFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <div key={index} className="text-center group">
-                  <div 
-                    className="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 group-hover:scale-110"
-                    style={{ backgroundColor: '#B8960F20' }}
-                  >
-                    <IconComponent size={36} style={{ color: '#B8960F' }} />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-white/80 font-light">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#2C3E50' }}>
-            Your Next Space is Just a Click Away
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 font-light">
-            Browse rentals that suit your lifestyle or business needs. We would help you get the keys.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/properties?status=For Rent">
-              <button 
-                className="font-semibold px-8 py-3.5 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
-                style={{ backgroundColor: '#B8960F', color: 'white', borderRadius: '0px' }}
+          {/* Search Bar */}
+          <div className="bg-white shadow-lg p-6 md:p-8 mb-12" style={{ borderRadius: '0px' }}>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+              <input
+                type="text"
+                placeholder="Location (e.g. Accra, Kumasi)"
+                className="p-3 border text-gray-700 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300"
+                style={{
+                  borderRadius: '0px',
+                  '--tw-ring-color': '#B8960F'
+                } as any}
+                value={searchData.location}
+                onChange={(e) => handleInputChange('location', e.target.value)}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = '#B8960F';
+                  e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = '#d1d5db';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              />
+              <select
+                className="p-3 border text-gray-700 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300"
+                style={{
+                  borderRadius: '0px',
+                  '--tw-ring-color': '#B8960F'
+                } as any}
+                value={searchData.propertyType}
+                onChange={(e) => handleInputChange('propertyType', e.target.value)}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = '#B8960F';
+                  e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = '#d1d5db';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <option value="">Property Type</option>
+                <option value="Apartments">Apartments</option>
+                <option value="Commercial">Commercial</option>
+                <option value="Short Stays">Short Stays</option>
+                
+              </select>
+              <select
+                className="p-3 border text-gray-700 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300"
+                style={{
+                  borderRadius: '0px',
+                  '--tw-ring-color': '#B8960F'
+                } as any}
+                value={searchData.priceRange}
+                onChange={(e) => handleInputChange('priceRange', e.target.value)}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = '#B8960F';
+                  e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = '#d1d5db';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <option value="">Price Range</option>
+                <option value="0-500">$0 - $500</option>
+                <option value="500-2000">$500 - $2,000</option>
+                <option value="2000-5000">$2,000 - $5,000</option>
+                <option value="5000-999999">$5,000+</option>
+              </select>
+              <select
+                className="p-3 border text-gray-700 focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-300"
+                style={{
+                  borderRadius: '0px',
+                  '--tw-ring-color': '#B8960F'
+                } as any}
+                value={searchData.bedrooms}
+                onChange={(e) => handleInputChange('bedrooms', e.target.value)}
+                onFocus={(e) => {
+                  e.currentTarget.style.borderColor = '#B8960F';
+                  e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                }}
+                onBlur={(e) => {
+                  e.currentTarget.style.borderColor = '#d1d5db';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <option value="">Bedrooms</option>
+                <option value="1">1+</option>
+                <option value="2">2+</option>
+                <option value="3">3+</option>
+                <option value="4">4+</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+
+            <div className="flex justify-center mt-6">
+              <button
+                className="px-8 py-3 font-semibold text-white transition-all duration-300 transform hover:scale-95"
+                style={{ backgroundColor: '#B8960F', borderRadius: '0px' }}
+                onClick={handleSearch}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A67C00'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B8960F'}
               >
-                Browse Rentals
+                Search Rentals
               </button>
-            </Link>
-            <Link to="/contact#contact-form">
-              <button 
-                className="px-8 py-3 font-semibold transition-all duration-300 border-2"
-                style={{ 
-                  borderColor: '#B8960F', 
-                  color: '#B8960F',
-                  borderRadius: '0px'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#B8960F';
-                  e.currentTarget.style.color = 'white';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = '#B8960F';
-                }}
-              >
-                Get Rental Assistance
-              </button>
-            </Link>
+            </div>
           </div>
         </div>
       </section>

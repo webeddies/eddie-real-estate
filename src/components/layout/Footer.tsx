@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoFooter from "../../assets/eddie-logo-footer.png";
+import logoFooter from "../../assets/edi-logo-footer.png";
 
 import {
   Phone,
