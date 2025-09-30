@@ -9,7 +9,6 @@ const Properties: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
 
-
   /** full filter state */
   const [filters, setFilters] = useState({
     status: '',
@@ -41,7 +40,6 @@ const Properties: React.FC = () => {
       propertyTypeList: [] as string[]          //  ← add the field here
     };
     searchFilters.status = params.get('status') || '';
-
 
     // ?propertyTypes=Luxury Homes,Private Homes
     const typesParam = params.get('propertyTypes');
@@ -144,35 +142,59 @@ const Properties: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-poppins">
+    <div className="min-h-screen bg-gray-50 font-transact">
       {/* Header */}
-      <div className="bg-white border-b">
+      <div className="bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">Properties</h1>
-              <p className="text-gray-600">
-                Showing {filteredProperties.length} of {properties.length} properties
+              <h1 className="text-3xl font-bold mb-2" style={{ color: '#2C3E50' }}>
+                Properties
+              </h1>
+              <p className="text-gray-600 font-light">
+                Showing <span className="font-medium" style={{ color: '#B8960F' }}>
+                  {filteredProperties.length}
+                </span> of <span className="font-medium">{properties.length}</span> properties
               </p>
             </div>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 border rounded-lg font-medium transition-all duration-300 hover:shadow-md"
+                style={{
+                  borderColor: '#B8960F',
+                  color: '#2C3E50'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#B8960F15';
+                  e.currentTarget.style.color = '#B8960F';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#2C3E50';
+                }}
               >
                 <SlidersHorizontal size={18} />
                 <span>Filters</span>
               </button>
-              <div className="flex border border-gray-300 rounded-lg">
+              <div className="flex border rounded-lg" style={{ borderColor: '#B8960F' }}>
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 ${viewMode === 'grid' ? 'bg-royal-blue text-white' : 'bg-white text-gray-600'} rounded-l-lg transition-colors`}
+                  className="p-2 rounded-l-lg transition-all duration-300"
+                  style={{
+                    backgroundColor: viewMode === 'grid' ? '#B8960F' : 'white',
+                    color: viewMode === 'grid' ? 'white' : '#2C3E50'
+                  }}
                 >
                   <Grid size={18} />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 ${viewMode === 'list' ? 'bg-royal-blue text-white' : 'bg-white text-gray-600'} rounded-r-lg transition-colors`}
+                  className="p-2 rounded-r-lg transition-all duration-300"
+                  style={{
+                    backgroundColor: viewMode === 'list' ? '#B8960F' : 'white',
+                    color: viewMode === 'list' ? 'white' : '#2C3E50'
+                  }}
                 >
                   <List size={18} />
                 </button>
@@ -186,116 +208,187 @@ const Properties: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 py-8 flex gap-8">
         {/* Filters Sidebar */}
         <div className={`${showFilters ? 'block' : 'hidden'} lg:block w-full lg:w-80 flex-shrink-0`}>
-          <div className="bg-white rounded-xl shadow-lg p-6 sticky top-24">
+          <div
+            className="bg-white p-6 sticky top-24 heartbeat-filter group/filter"
+            style={{ borderRadius: '0px' }}
+          >
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
+              <h3 className="text-lg font-semibold" style={{ color: '#2C3E50' }}>
+                Filters
+              </h3>
               <button
                 onClick={clearFilters}
-                className="text-royal-blue hover:text-blue-700 text-sm font-medium"
+                className="text-sm font-medium transition-colors duration-300 hover:underline"
+                style={{ color: '#B8960F' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#A67C00'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#B8960F'}
               >
                 Clear All
               </button>
             </div>
 
-            {/* Status */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Status</label>
-              <select
-                value={filters.status}
-                onChange={(e) => handleFilterChange('status', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-              >
-                <option value="">All</option>
-                <option value="For Sale">For Sale</option>
-                <option value="For Rent">For Rent</option>
-              </select>
-            </div>
 
-            {/* Location */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
-              <input
-                type="text"
-                placeholder="Enter location"
-                value={filters.location}
-                onChange={(e) => handleFilterChange('location', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-              />
-            </div>
+            <div className="space-y-6">
+              {/* Status */}
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#2C3E50' }}>
+                  Status
+                </label>
+                <select
+                  value={filters.status}
+                  onChange={(e) => handleFilterChange('status', e.target.value)}
+                  className="w-full px-3 py-2 transition-all duration-300 border focus:outline-none focus:border-transparent focus:ring-2 focus:ring-[#B8960F] focus:ring-offset-2 focus:ring-offset-[#B8960F20]"
+                  style={{
+                    borderRadius: '0px',
+                    borderColor: filters.status ? '#B8960F' : '#d1d5db'
+                  }}
+                >
+                  <option value="">All</option>
+                  <option value="For Sale">For Sale</option>
+                  <option value="For Rent">For Rent</option>
+                </select>
+              </div>
 
-            {/* Price Range */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
-              <div className="grid grid-cols-2 gap-2">
+              {/* Location */}
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#2C3E50' }}>
+                  Location
+                </label>
                 <input
-                  type="number"
-                  placeholder="Min"
-                  value={filters.priceMin}
-                  onChange={(e) => handleFilterChange('priceMin', e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-                />
-                <input
-                  type="number"
-                  placeholder="Max"
-                  value={filters.priceMax}
-                  onChange={(e) => handleFilterChange('priceMax', e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
+                  type="text"
+                  placeholder="Enter location"
+                  value={filters.location}
+                  onChange={(e) => handleFilterChange('location', e.target.value)}
+                  className="w-full px-3 py-2 border transition-all duration-300 focus:outline-none focus:ring-2 focus:border-transparent placeholder-gray-400"
+                  style={{
+                    borderRadius: '0px',
+                    borderColor: filters.location ? '#B8960F' : '#d1d5db'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = '#B8960F';
+                    e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = filters.location ? '#B8960F' : '#d1d5db';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
                 />
               </div>
-            </div>
 
-            {/* Property Type */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Property Type</label>
-              <select
-                value={filters.propertyType}
-                onChange={(e) => handleFilterChange('propertyType', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-              >
-                <option value="">All</option>
-                <option value="Luxury Homes">Luxury Homes</option>
-                <option value="Private Homes">Private Homes</option>
-                <option value="Apartments">Apartments</option>
-                <option value="Commercial">Commercial</option>
-                <option value="Short Stays">Short Stays</option>
-              </select>
-            </div>
+              {/* Price Range */}
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#2C3E50' }}>
+                  Price Range
+                </label>
+                <div className="grid grid-cols-2 gap-2">
+                  <input
+                    type="number"
+                    placeholder="Min"
+                    value={filters.priceMin}
+                    onChange={(e) => handleFilterChange('priceMin', e.target.value)}
+                    className="px-3 py-2 border transition-all duration-300 focus:outline-none focus:ring-2 focus:border-transparent placeholder-gray-400"
+                    style={{
+                      borderRadius: '0px',
+                      borderColor: filters.priceMin ? '#B8960F' : '#d1d5db'
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#B8960F';
+                      e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = filters.priceMin ? '#B8960F' : '#d1d5db';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Max"
+                    value={filters.priceMax}
+                    onChange={(e) => handleFilterChange('priceMax', e.target.value)}
+                    className="px-3 py-2 border transition-all duration-300 focus:outline-none focus:ring-2 focus:border-transparent placeholder-gray-400"
+                    style={{
+                      borderRadius: '0px',
+                      borderColor: filters.priceMax ? '#B8960F' : '#d1d5db'
+                    }}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#B8960F';
+                      e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = filters.priceMax ? '#B8960F' : '#d1d5db';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  />
+                </div>
+              </div>
 
-            {/* Bedrooms */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Bedrooms</label>
-              <select
-                value={filters.bedrooms}
-                onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-              >
-                <option value="">Any</option>
-                <option value="1">1+ Bedrooms</option>
-                <option value="2">2+ Bedrooms</option>
-                <option value="3">3+ Bedrooms</option>
-                <option value="4">4+ Bedrooms</option>
-                <option value="5">5+ Bedrooms</option>
-              </select>
-            </div>
+              {/* Property Type */}
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#2C3E50' }}>
+                  Property Type
+                </label>
+                <select
+                  value={filters.propertyType}
+                  onChange={(e) => handleFilterChange('propertyType', e.target.value)}
+                  className="w-full px-3 py-2 border transition-all duration-300 focus:outline-none focus:ring-2 focus:border-transparent"
+                  style={{
+                    borderRadius: '0px',
+                    borderColor: filters.propertyType ? '#B8960F' : '#d1d5db'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = '#B8960F';
+                    e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = filters.propertyType ? '#B8960F' : '#d1d5db';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <option value="">All</option>
+                  <option value="Luxury Homes">Luxury Homes</option>
+                  <option value="Private Homes">Private Homes</option>
+                  <option value="Apartments">Apartments</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Short Stays">Short Stays</option>
+                </select>
+              </div>
 
-            {/* Bathrooms (optional, you had it before) */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Bathrooms</label>
-              <select
-                value={filters.bathrooms}
-                onChange={(e) => handleFilterChange('bathrooms', e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent"
-              >
-                <option value="">Any</option>
-                <option value="1">1+ Baths</option>
-                <option value="2">2+ Baths</option>
-                <option value="3">3+ Baths</option>
-                <option value="4">4+ Baths</option>
-              </select>
-            </div>
+              {/* Bedrooms */}
+              <div>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#2C3E50' }}>
+                  Bedrooms
+                </label>
+                <select
+                  value={filters.bedrooms}
+                  onChange={(e) => handleFilterChange('bedrooms', e.target.value)}
+                  className="w-full px-3 py-2 border transition-all duration-300 focus:outline-none focus:ring-2 focus:border-transparent"
+                  style={{
+                    borderRadius: '0px',
+                    borderColor: filters.bedrooms ? '#B8960F' : '#d1d5db'
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = '#B8960F';
+                    e.currentTarget.style.boxShadow = '0 0 0 2px #B8960F20';
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = filters.bedrooms ? '#B8960F' : '#d1d5db';
+                    e.currentTarget.style.boxShadow = 'none';
+                  }}
+                >
+                  <option value="">Any</option>
+                  <option value="1">1+ Bedrooms</option>
+                  <option value="2">2+ Bedrooms</option>
+                  <option value="3">3+ Bedrooms</option>
+                  <option value="4">4+ Bedrooms</option>
+                  <option value="5">5+ Bedrooms</option>
+                </select>
+              </div>
 
+               
+            </div>
           </div>
         </div>
+
 
         {/* Property Listings */}
         <div className="flex-1">
@@ -310,14 +403,21 @@ const Properties: React.FC = () => {
             </div>
           ) : (
             <div className="text-center py-12">
-              <div className="text-gray-400 mb-4">
+              <div className="text-gray-300 mb-6">
                 <Filter size={48} className="mx-auto" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">No properties found</h3>
-              <p className="text-gray-600 mb-4">Try adjusting your filters to see more results.</p>
+              <h3 className="text-lg font-semibold mb-2" style={{ color: '#2C3E50' }}>
+                No properties found
+              </h3>
+              <p className="text-gray-600 mb-6 font-light">
+                Try adjusting your filters to see more results.
+              </p>
               <button
                 onClick={clearFilters}
-                className="bg-royal-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                className="text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+                style={{ backgroundColor: '#B8960F' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A67C00'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B8960F'}
               >
                 Clear Filters
               </button>
@@ -325,6 +425,11 @@ const Properties: React.FC = () => {
           )}
         </div>
       </div>
+
+
+
+
+      
     </div>
   );
 };

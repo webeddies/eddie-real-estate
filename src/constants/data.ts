@@ -28,7 +28,7 @@ export const properties = [
   {
     id: 3,
     title: "Luxurious Island Property",
-    price: "$2,550,000",
+    price: "$2,150,000",
     location: "Axim",
     bedrooms: 8,
     bathrooms: 9,
@@ -1096,7 +1096,7 @@ export const propertyCategories = [
   {
     id: 1,
     name: "Apartments",
-    icon: "Building2",
+     
     description: "Modern apartments in prime locations",
     count: 16,
     types: ["Apartments"]
@@ -1104,15 +1104,15 @@ export const propertyCategories = [
   {
     id: 2,
     name: "Houses",
-    icon: "Home",
+     
     description: "Family homes and luxury estates",
     count: 31,
-    types: ["Luxury Homes", "Private Homes"] // 👈 MULTIPLE types
+    types: ["Luxury Homes", "Private Homes"]  
   },
   {
     id: 3,
     name: "Commercial",
-    icon: "Building",
+     
     description: "Office spaces and retail properties",
     count: 16,
     types: ["Commercial"]
@@ -1120,7 +1120,7 @@ export const propertyCategories = [
   {
     id: 4,
     name: "Lands",
-    icon: "MapPin",
+     
     description: "Development plots and agricultural land",
     count: 0,
     types: ["Lands"]
@@ -1128,7 +1128,7 @@ export const propertyCategories = [
   {
     id: 5,
     name: "Short Stays",
-    icon: "Calendar",
+    
     description: "Vacation rentals and short-term stays",
     count: 8,
     types: ["Short Stays"]

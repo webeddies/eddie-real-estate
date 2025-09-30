@@ -5,18 +5,25 @@ export default {
     extend: {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
+        'transact': ['Transact', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       colors: {
         'royal-blue': '#0056b3',
         'sky-blue': '#87cefa',
         'dark-gray': '#333333',
+        // New luxury color palette
+        'luxury-gold': '#B8960F',
+        'luxury-navy': '#2C3E50',
+        'luxury-gold-light': '#D4AF37',
+        'luxury-gold-dark': '#A67C00',
+        'luxury-navy-light': '#34495E',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'float': 'float 3s ease-in-out infinite',
         'fade-up': 'fadeUp 1s ease-out forwards',
-        'fade-slide-up': 'fadeSlideUp 0.6s ease-out forwards', // 👈 NEW
+        'fade-slide-up': 'fadeSlideUp 0.6s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -39,6 +46,11 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        shimmer: {  
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        
       }
     },
   },

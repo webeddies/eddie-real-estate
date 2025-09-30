@@ -28,7 +28,7 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-6 max-w-6xl mx-auto">
+    <div className="bg-white shadow-xl p-6 max-w-6xl mx-auto" style={{ borderRadius: '0px' }}>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
         {/* Location */}
         <div className="space-y-2">
@@ -39,7 +39,8 @@ const SearchBar: React.FC = () => {
             <input
               type="text"
               placeholder="City, Region"
-              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent outline-none transition-all text-black placeholder-gray-500"
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 focus:ring-2 focus:ring-royal-blue focus:border-transparent outline-none transition-all text-black placeholder-gray-500"
+              style={{ borderRadius: '0px' }}
               value={searchData.location}
               onChange={(e) => handleInputChange('location', e.target.value)}
             />
@@ -58,7 +59,8 @@ const SearchBar: React.FC = () => {
               />
             )}
             <select
-              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              style={{ borderRadius: '0px' }}
               value={searchData.propertyType}
               onChange={(e) => handleInputChange('propertyType', e.target.value)}
             >
@@ -83,7 +85,8 @@ const SearchBar: React.FC = () => {
               />
             )}
             <select
-              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              style={{ borderRadius: '0px' }}
               value={searchData.priceRange}
               onChange={(e) => handleInputChange('priceRange', e.target.value)}
             >
@@ -106,7 +109,8 @@ const SearchBar: React.FC = () => {
               />
             )}
             <select
-              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              className="w-full pl-14 md:pl-10 pr-4 py-3 border border-gray-300 focus:ring-2 focus:ring-royal-blue focus:border-transparent bg-white text-gray-700"
+              style={{ borderRadius: '0px' }}
               value={searchData.bedrooms}
               onChange={(e) => handleInputChange('bedrooms', e.target.value)}
             >
@@ -124,7 +128,17 @@ const SearchBar: React.FC = () => {
         <div>
           <button
             onClick={handleSearch}
-            className="w-full bg-royal-blue text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold flex items-center justify-center space-x-2"
+            className="w-full text-white py-3 px-6 transition-colors font-semibold flex items-center justify-center space-x-2"
+            style={{ 
+              backgroundColor: '#1e3a5f',
+              borderRadius: '0px'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#152d47';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#1e3a5f';
+            }}
           >
             <Search size={18} />
             <span>Search</span>
