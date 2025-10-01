@@ -1,5 +1,6 @@
 import React from 'react';
 import { Bed, Bath, Square, MapPin, Heart } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface PropertyCardProps {
   id: number;
@@ -11,23 +12,40 @@ interface PropertyCardProps {
   washrooms?: number;
   area: string;
   image: string;
+  additionalImages?: string[];
+  description?: string;
+  amenities?: string[];
   status: string;
+  propertyType: string;
   featured?: boolean;
 }
 
-const PropertyCard: React.FC<PropertyCardProps> = ({
-  id,
-  title,
-  price,
-  location,
-  bedrooms,
-  bathrooms,
-  washrooms,
-  area,
-  image,
-  status,
-  featured = false
-}) => {
+const PropertyCard: React.FC<PropertyCardProps> = (props) => {
+  const {
+    id,
+    title,
+    price,
+    location,
+    bedrooms,
+    bathrooms,
+    washrooms,
+    area,
+    image,
+    additionalImages,
+    description,
+    amenities,
+    status,
+    propertyType,
+    featured = false,
+  } = props;
+
+  const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+    // ✅ navigate to the new dynamic route and pass state
+    navigate(`/properties/${id}`, { state: { property: props } });
+  };
+
   return (
     <div 
       className="bg-white shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-gray-200 font-transact"
@@ -46,8 +64,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
             className="px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm border"
             style={{
               backgroundColor: status === 'For Sale' ? '#2C3E50'  : '#8A0119',
-              color: status === 'For Sale' ? 'white' : 'white',
-              borderColor: status === 'For Sale' ? '#2C3E5030' : '#2C3E5030'
+              color: 'white',
+              borderColor: '#2C3E5030'
             }}
           >
             {status}
@@ -68,17 +86,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         
         <button 
           className="absolute top-4 right-4 p-2 bg-white/90 backdrop-blur-sm rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg group/heart"
-          style={{
-            border: '1px solid #B8960F20'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = '#B8960F';
-            e.currentTarget.style.color = 'white';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-            e.currentTarget.style.color = '#2C3E50';
-          }}
+          style={{ border: '1px solid #B8960F20' }}
         >
           <Heart size={16} className="transition-transform duration-300 group-hover/heart:scale-110" />
         </button>
@@ -89,8 +97,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           <div className="flex-1 pr-4">
             <h3 className="text-lg font-semibold transition-colors duration-300 group-hover:transform group-hover:translate-x-1"
                 style={{ color: '#2C3E50' }}
-                onMouseEnter={(e) => e.currentTarget.style.color = '#B8960F'}
-                onMouseLeave={(e) => e.currentTarget.style.color = '#2C3E50'}
             >
               <span className="text-xs font-light mr-2" style={{ color: '#B8960F' }}>
                 #{id.toString().padStart(2, '0')}
@@ -115,24 +121,24 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           <div className="flex items-center space-x-4">
             {washrooms !== undefined ? (
               <div className="flex items-center group/feature">
-                <Bath size={16} className="mr-1.5 transition-colors duration-300 group-hover/feature:text-orange-500" style={{ color: '#B8960F' }} />
+                <Bath size={16} className="mr-1.5" style={{ color: '#B8960F' }} />
                 <span className="text-sm font-medium">{washrooms} WR</span>
               </div>
             ) : (
               <>
                 <div className="flex items-center group/feature">
-                  <Bed size={16} className="mr-1.5 transition-colors duration-300" style={{ color: '#B8960F' }} />
+                  <Bed size={16} className="mr-1.5" style={{ color: '#B8960F' }} />
                   <span className="text-sm font-medium">{bedrooms} Beds</span>
                 </div>
                 <div className="flex items-center group/feature">
-                  <Bath size={16} className="mr-1.5 transition-colors duration-300" style={{ color: '#B8960F' }} />
+                  <Bath size={16} className="mr-1.5" style={{ color: '#B8960F' }} />
                   <span className="text-sm font-medium">{bathrooms} Baths</span>
                 </div>
               </>
             )}
 
             <div className="flex items-center group/feature">
-              <Square size={16} className="mr-1.5 transition-colors duration-300" style={{ color: '#B8960F' }} />
+              <Square size={16} className="mr-1.5" style={{ color: '#B8960F' }} />
               <span className="text-sm font-medium">{area}</span>
             </div>
           </div>
@@ -140,22 +146,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
         
         <div className="flex justify-center">
           <button 
+            onClick={handleViewDetails}
             className="px-6 py-3 font-semibold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg relative overflow-hidden group/button"
             style={{ backgroundColor: '#2C3E50', borderRadius: '0px' }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#B8960F';
-              e.currentTarget.style.transform = 'translateY(-2px)';
-              e.currentTarget.style.boxShadow = '0 10px 25px rgba(184, 150, 15, 0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#2C3E50';
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-            }}
           >
-            <span className="relative z-10 text-white">
-              View Details
-            </span>
+            <span className="relative z-10 text-white">View Details</span>
             <div 
               className="absolute inset-0 opacity-0 group-hover/button:opacity-100 transition-opacity duration-300 animate-shimmer"
               style={{

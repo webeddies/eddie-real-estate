@@ -3,8 +3,10 @@ import { Filter, Grid, List, SlidersHorizontal } from 'lucide-react';
 import PropertyCard from '../components/ui/PropertyCard';
 import { properties } from '../constants/data';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Properties: React.FC = () => {
+  const navigate = useNavigate();
   const [filteredProperties, setFilteredProperties] = useState(properties);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [showFilters, setShowFilters] = useState(false);
@@ -384,7 +386,7 @@ const Properties: React.FC = () => {
                 </select>
               </div>
 
-               
+
             </div>
           </div>
         </div>
@@ -398,7 +400,10 @@ const Properties: React.FC = () => {
               : 'grid-cols-1'
               }`}>
               {filteredProperties.map((property) => (
-                <PropertyCard key={property.id} {...property} />
+                <PropertyCard
+                  key={property.id}
+                  {...property}
+                />
               ))}
             </div>
           ) : (
@@ -429,7 +434,7 @@ const Properties: React.FC = () => {
 
 
 
-      
+
     </div>
   );
 };

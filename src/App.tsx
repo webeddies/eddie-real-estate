@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
 import AllBlogs from './pages/AllBlogs';
+import PropertyDetails from './pages/PropertyDetails';
 
 import Home from './pages/Home';
 import Properties from './pages/Properties';
@@ -17,7 +18,6 @@ const About: React.FC = () => (
   <div className="min-h-screen bg-gray-50 flex items-center justify-center">
     <div className="text-center">
       <h1 className="text-3xl font-bold text-gray-900 mb-4"></h1>
-       
     </div>
   </div>
 );
@@ -30,12 +30,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/properties" element={<Properties />} />
+         
+          <Route path="/properties/:id" element={<PropertyDetails />} />
           <Route path="/buy" element={<Buy />} />
           <Route path="/rent" element={<Rent />} />
           <Route path="/sell" element={<Sell />} />
           <Route path="/agents" element={<Agents />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/allblogs" element={<AllBlogs />} /> 
+          <Route path="/allblogs" element={<AllBlogs />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
