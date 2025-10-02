@@ -9,10 +9,10 @@ export const properties = [
     area: "305 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/o1.jfif",
     additionalImages: [
-      "", 
-      "", 
-      "", 
-      "", 
+      "",
+      "",
+      "",
+      "",
       ""],
     description: "This exquisite 4-bedroom luxury home in the heart of North Legon combines contemporary design with functional living spaces. Featuring high ceilings, modern finishes, and an open-plan layout, this property is perfect for families seeking comfort in one of Accra's most sought-after neighborhoods. The home boasts premium fixtures throughout, with ample natural lighting and ventilation. Close to international schools, shopping centers, and major access routes.",
     amenities: [
@@ -582,6 +582,23 @@ export const properties = [
     bathrooms: 3,
     area: "460 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t2.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Experience the fresh mountain air and cooler climate of Aburi in this stunning 3-bedroom hilltop apartment. Located in Ghana's famous botanical gardens town, this property offers breathtaking views, tranquil surroundings, and a perfect escape from Accra's heat. The apartment features spacious rooms, modern finishes, and large windows that frame the scenic landscape. Ideal for executives seeking a weekend retreat or families wanting a healthier living environment while remaining within commuting distance to Accra.",
+    amenities: [
+      "Mountain Views",
+      "Cool Climate",
+      "All Bedrooms En-suite",
+      "Modern Kitchen",
+      "Spacious Balconies",
+      "24-Hour Security",
+      "Generator Backup",
+      "Water Storage System",
+      "Parking for 2 Cars",
+      "Garden Access",
+      "Guest Washroom",
+      "Tiled Throughout",
+      "Air Circulation (Natural Cooling)"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -595,6 +612,23 @@ export const properties = [
     bathrooms: 5,
     area: "230 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/s5.jpg",
+    additionalImages: ["", "", "", "", ""],
+    description: "Classic 4-bedroom family home in the established New Achimota neighborhood. This well-built property offers traditional architectural charm combined with modern conveniences. With 5 bathrooms including a guest washroom, the home is perfect for growing families. Located near the Achimota Forest Reserve, Golf Club, and top international schools, this property offers both tranquility and convenience. The area boasts excellent infrastructure with reliable utilities and good road networks.",
+    amenities: [
+      "Walled Compound",
+      "Security Gate",
+      "All Bedrooms En-suite",
+      "Guest Washroom",
+      "Spacious Kitchen",
+      "Family Dining Area",
+      "Front Porch",
+      "Back Garden",
+      "Water Storage Tank",
+      "Generator Provision",
+      "3-Car Parking",
+      "Boys' Quarters",
+      "Tiled Throughout"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: false
@@ -608,6 +642,25 @@ export const properties = [
     bathrooms: 6,
     area: "420 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t1.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Exceptional 5-bedroom luxury villa in the prestigious Airport Residential Area. This architectural masterpiece features contemporary design, premium finishes, and smart home technology throughout. The property includes a master suite with walk-in closet and spa bathroom, gourmet kitchen, entertainment spaces, and beautifully landscaped grounds. Located in Accra's diplomatic enclave, this villa offers ultimate privacy, security, and proximity to international schools, embassies, and upscale shopping. A statement property for discerning buyers.",
+    amenities: [
+      "Gated Community",
+      "Smart Home System",
+      "Central Air Conditioning",
+      "Solar Power System",
+      "CCTV Surveillance",
+      "Swimming Pool",
+      "Landscaped Gardens",
+      "Master Suite with Jacuzzi",
+      "Walk-in Closets",
+      "Modern Chef's Kitchen",
+      "Home Office/Study",
+      "Entertainment Room",
+      "4 Staff Quarters",
+      "4-Car Garage",
+      "Backup Generator"
+    ],
     status: "For Sale",
     propertyType: "Luxury Homes",
     featured: true
@@ -621,6 +674,23 @@ export const properties = [
     bathrooms: 4,
     area: "410 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t19.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Beautiful 4-bedroom terraced duplex with sea views in the coastal town of Winneba. This modern property features two floors of comfortable living space plus a self-contained boys' quarters. Perfect for families seeking beach lifestyle while maintaining modern amenities. The duplex offers a private compound within a secure estate, just minutes from the beach. Winneba offers excellent schools including the University of Education, hospitals, and a relaxed coastal atmosphere, making it ideal for academics and families.",
+    amenities: [
+      "Sea Views",
+      "Estate Security",
+      "Boys' Quarters (Self-Contained)",
+      "All Bedrooms En-suite",
+      "Duplex Design",
+      "Modern Kitchen",
+      "Guest Washroom",
+      "Balconies",
+      "Generator Backup",
+      "Water Storage",
+      "3-Car Parking",
+      "Paved Compound",
+      "Close to Beach"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -634,6 +704,23 @@ export const properties = [
     bathrooms: 3,
     area: "380 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t7.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Modern 3-bedroom townhouse in the rapidly developing Kwabenya area. This property offers contemporary living at an affordable price, featuring all bedrooms en-suite, a spacious living area, and a functional kitchen. Kwabenya has experienced significant infrastructure development, with improved roads, commercial centers, and good access to both Accra and the Aburi mountains. An excellent choice for first-time buyers or investors looking for capital appreciation in a growing neighborhood.",
+    amenities: [
+      "Gated Compound",
+      "Security Gate",
+      "All Bedrooms En-suite",
+      "Modern Kitchen",
+      "Open Plan Living",
+      "Guest Washroom",
+      "Tiled Floors",
+      "Pop Ceiling",
+      "Water Storage",
+      "Parking for 2 Cars",
+      "Porch Area",
+      "Generator Ready",
+      "Room for Extension"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: false
@@ -647,6 +734,25 @@ export const properties = [
     bathrooms: 6,
     area: "480 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t4.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Ultra-luxurious 5-bedroom townhouse in the heart of Ridge, Accra's most prestigious residential area. This exquisite property features top-of-the-line finishes, designer interiors, and state-of-the-art amenities. Located within walking distance of government ministries, high commissions, and upscale restaurants, this townhouse is perfect for diplomatic staff, corporate executives, or affluent families. The property includes a private rooftop terrace with panoramic city views, home automation, and 24/7 concierge service.",
+    amenities: [
+      "Prime Ridge Location",
+      "24/7 Concierge Service",
+      "Smart Home Automation",
+      "Central Air Conditioning",
+      "Rooftop Terrace",
+      "City Views",
+      "Designer Kitchen",
+      "Wine Cellar",
+      "Home Theater",
+      "Gym Room",
+      "Solar + Generator Backup",
+      "CCTV Security",
+      "4-Car Basement Parking",
+      "Staff Quarters",
+      "Elevator Access"
+    ],
     status: "For Rent",
     propertyType: "Luxury Homes",
     featured: true
@@ -660,6 +766,24 @@ export const properties = [
     bathrooms: 6,
     area: "360 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t13.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Striking contemporary 6-bedroom home in Obuasi, Ghana's historic mining town. This architecturally impressive property showcases minimalist design with clean lines, large windows, and premium finishes throughout. Perfect for mining executives, business owners, or affluent families in the Ashanti Region. The home features expansive living spaces, a modern kitchen, and a master suite with luxury amenities. Obuasi offers good infrastructure, quality schools, and investment opportunities in Ghana's gold mining heartland.",
+    amenities: [
+      "Contemporary Architecture",
+      "All Bedrooms En-suite",
+      "Master Suite with Dressing Room",
+      "Gourmet Kitchen",
+      "Open Plan Living",
+      "Home Office",
+      "Solar Power System",
+      "Generator House",
+      "CCTV Security",
+      "Landscaped Compound",
+      "Swimming Pool Ready",
+      "4-Car Garage",
+      "2 Staff Quarters",
+      "Water Treatment System"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: true
@@ -673,6 +797,23 @@ export const properties = [
     bathrooms: 3,
     area: "180 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t11.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Cozy short-stay accommodation in Kotei, one of Kumasi's upscale neighborhoods. This fully furnished 3-bedroom property offers comfortable lodging for business travelers, tourists, or families visiting the Ashanti Region. The property features modern amenities, a well-equipped kitchen, and a homely atmosphere. Located near KNUST, shopping centers, and major commercial areas, this is perfect for short-term rentals. The area is quiet, secure, and offers easy access to Kumasi's attractions and business districts.",
+    amenities: [
+      "Fully Furnished",
+      "Self-Catering Kitchen",
+      "Air Conditioners",
+      "DSTV/Netflix Ready",
+      "WiFi Included",
+      "All Bedrooms En-suite",
+      "Living and Dining Areas",
+      "Washing Machine",
+      "Generator Backup",
+      "Gated Compound Security",
+      "Parking Space",
+      "Daily Cleaning Available",
+      "Prepaid Meter"
+    ],
     status: "For Rent",
     propertyType: "Short Stays",
     featured: false
@@ -686,6 +827,23 @@ export const properties = [
     bathrooms: 3,
     area: "285 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t12.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Charming 3-bedroom home in the established Tse Addo neighborhood. This property offers solid construction, practical layout, and good value in a well-located area. Perfect for young professionals, small families, or as an investment property in inner-city Accra. Tse Addo benefits from proximity to the airport, commercial centers, and major roads, while maintaining a residential character. The home features all bedrooms en-suite, a functional kitchen, and adequate parking space.",
+    amenities: [
+      "Strategic Location",
+      "Walled Compound",
+      "Security Gate",
+      "All Bedrooms En-suite",
+      "Kitchen with Cabinets",
+      "Guest Washroom",
+      "Tiled Throughout",
+      "Water Storage Tank",
+      "Generator Provision",
+      "2-Car Parking",
+      "Front Porch",
+      "Boys' Quarters",
+      "Close to Airport"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: false
@@ -699,6 +857,22 @@ export const properties = [
     bathrooms: 2,
     area: "370 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t17.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Affordable 2-bedroom apartment in Apowa, a residential area of Takoradi. This well-maintained unit offers comfortable living spaces with both bedrooms en-suite, a functional kitchen, and a decent living area. Perfect for professionals in the oil and gas industry, young couples, or small families seeking budget-friendly accommodation in the Western Region capital. The area provides good access to the harbor, commercial centers, and the beach, with reliable utilities and growing amenities.",
+    amenities: [
+      "Secure Compound",
+      "Both Bedrooms En-suite",
+      "Kitchen Space",
+      "Living/Dining Area",
+      "Guest Washroom",
+      "Tiled Floors",
+      "Water Storage",
+      "Generator Backup",
+      "Parking Space",
+      "Balcony",
+      "Prepaid Meter",
+      "Good Road Access"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -712,6 +886,23 @@ export const properties = [
     bathrooms: 4,
     area: "515 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t24.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Spacious 3-bedroom executive apartment in the expanding Pokuase district. This well-appointed property features modern finishes, generous room sizes, and an extra bathroom for convenience. Perfect for professionals and families who want suburban tranquility while staying connected to Accra. Pokuase has seen major infrastructure upgrades including the new Pokuase Interchange, improving access to the city center. The apartment offers comfortable living spaces, a modern kitchen, and quality construction throughout.",
+    amenities: [
+      "Gated Community",
+      "24-Hour Security",
+      "All Bedrooms En-suite",
+      "Guest Washroom",
+      "Modern Fitted Kitchen",
+      "Spacious Living Area",
+      "Generator Backup",
+      "Water Storage System",
+      "Covered Parking for 2 Cars",
+      "Balcony",
+      "Tiled Throughout",
+      "Prepaid Meter",
+      "DSTV Ready"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -725,6 +916,22 @@ export const properties = [
     bathrooms: 2,
     area: "210 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t22.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Perfect starter home in the beautiful mountain town of Kwahu-Mpraeso. This compact 2-bedroom property offers affordable homeownership in one of Ghana's most scenic locations. Known for its cool climate and the famous Kwahu Paragliding Festival, Mpraeso is ideal for retirees, vacation homes, or tourism investments. The property features modern construction, both bedrooms en-suite, and sits on a plot with potential for gardening. Experience mountain living with fresh air and a peaceful environment.",
+    amenities: [
+      "Mountain Location",
+      "Cool Climate",
+      "Both Bedrooms En-suite",
+      "Modern Kitchen",
+      "Living/Dining Area",
+      "Tiled Floors",
+      "Water Storage",
+      "Security Fence",
+      "Front Porch",
+      "Garden Space",
+      "Parking Space",
+      "Own Plot Title"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: false
@@ -738,6 +945,23 @@ export const properties = [
     bathrooms: 4,
     area: "275 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t20.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Modern 4-bedroom semidetached duplex in Oyoko, one of Koforidua's prime residential areas. This property features two floors of well-designed living space plus a self-contained boys' quarters. The duplex design offers privacy between living areas with bedrooms on the upper floor. Oyoko is known for quality schools, proximity to the Koforidua Golf Club, and a serene environment. Perfect for families seeking a peaceful lifestyle in the Eastern Region with easy access to Accra via the motorway.",
+    amenities: [
+      "Semidetached Design",
+      "Duplex Layout",
+      "All Bedrooms En-suite",
+      "Boys' Quarters (Self-Contained)",
+      "Modern Kitchen",
+      "Guest Washroom",
+      "Living and Dining Areas",
+      "Balcony",
+      "Tiled Throughout",
+      "Water Storage Tank",
+      "Generator Provision",
+      "Parking for 3 Cars",
+      "Walled Compound"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: false
@@ -751,6 +975,23 @@ export const properties = [
     bathrooms: 4,
     area: "520 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t21.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Luxurious 4-bedroom rental property in the rapidly developing Afienya area. This spacious home offers generous living spaces, modern amenities, and a tranquil setting away from city congestion. Afienya has become increasingly popular due to improved infrastructure and proximity to both Accra and Tema. The property features quality construction, all bedrooms en-suite, and sits on a large compound with landscaping potential. Perfect for executives seeking space and comfort at a reasonable rental price.",
+    amenities: [
+      "Spacious Compound",
+      "24-Hour Security",
+      "All Bedrooms En-suite",
+      "Modern Fitted Kitchen",
+      "Family Living Area",
+      "Guest Washroom",
+      "Generator Backup",
+      "Borehole Water",
+      "Air Conditioning Ready",
+      "Covered Parking",
+      "Garden Space",
+      "Boys' Quarters",
+      "Paved Driveway"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -764,6 +1005,22 @@ export const properties = [
     bathrooms: 2,
     area: "470 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t15.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Affordable 2-bedroom apartment in Dodowa, a growing residential area on the Accra plains. This property offers good value for money with modern finishes, both bedrooms en-suite, and adequate living space. Dodowa provides a quieter alternative to city living while maintaining reasonable access to Accra and Tema. The area features improving infrastructure, markets, schools, and healthcare facilities. Ideal for young professionals, couples, or small families seeking budget-friendly accommodation with room to breathe.",
+    amenities: [
+      "Secure Compound",
+      "Both Bedrooms En-suite",
+      "Kitchen with Cabinets",
+      "Living/Dining Area",
+      "Guest Washroom",
+      "Tiled Floors",
+      "Water Storage",
+      "Generator Backup",
+      "Parking Space",
+      "Balcony",
+      "Prepaid Meter",
+      "Good Road Access"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -777,6 +1034,23 @@ export const properties = [
     bathrooms: 5,
     area: "270 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t18.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Spacious 5-bedroom short-stay property in Patasi, a residential suburb of Kumasi. This home is perfect for families visiting the Ashanti Region, groups attending events, or corporate housing needs. The property offers comfortable accommodation with all bedrooms en-suite, a large living area, and a fully equipped kitchen. Patasi is close to major hotels, the Kumasi Sports Stadium, and commercial areas. Ideal for extended stays, family gatherings, or as a base for exploring Ghana's cultural capital.",
+    amenities: [
+      "Fully Furnished",
+      "All Bedrooms En-suite",
+      "Self-Catering Kitchen",
+      "Large Living/Dining Area",
+      "Air Conditioners",
+      "DSTV Connection",
+      "WiFi Available",
+      "Generator Backup",
+      "Gated Compound",
+      "Parking for 3 Cars",
+      "Laundry Facilities",
+      "Housekeeping Available",
+      "Guest Washroom"
+    ],
     status: "For Rent",
     propertyType: "Short Stays",
     featured: false
@@ -790,6 +1064,22 @@ export const properties = [
     bathrooms: 3,
     area: "230 sq m",
     image: "https://images.pexels.com/photos/1974596/pexels-photo-1974596.jpeg",
+    additionalImages: ["", "", "", "", ""],
+    description: "Well-located 3-bedroom home in Dzorwulu, one of Accra's established middle-class neighborhoods. This property offers solid construction and functional design at a competitive price. Dzorwulu benefits from proximity to Ring Road, shopping centers, hospitals, and international schools. The area has reliable utilities, good security, and mature infrastructure. Perfect for first-time buyers, young families, or investors seeking rental income in a strategic location with strong tenant demand.",
+    amenities: [
+      "Strategic Location",
+      "All Bedrooms En-suite",
+      "Kitchen with Cabinets",
+      "Guest Washroom",
+      "Living/Dining Areas",
+      "Tiled Throughout",
+      "Water Storage Tank",
+      "Security Fence",
+      "Generator Provision",
+      "Parking for 2 Cars",
+      "Front Porch",
+      "Close to Major Roads"
+    ],
     status: "For Sale",
     propertyType: "Private Homes",
     featured: false
@@ -803,6 +1093,24 @@ export const properties = [
     bathrooms: 6,
     area: "385 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t23.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Premium 5-bedroom luxury rental in the exclusive East Airport residential area. This sophisticated property features contemporary design, high-end finishes, and top-tier amenities throughout. Located in Accra's diplomatic zone near embassies, international schools, and upscale shopping, this home offers ultimate convenience for expatriates and senior executives. The property includes smart home features, landscaped gardens, and staff accommodation. Experience refined living in one of Ghana's most prestigious neighborhoods.",
+    amenities: [
+      "Prime Location",
+      "24/7 Security Service",
+      "All Bedrooms En-suite",
+      "Master Suite with Dressing Room",
+      "Gourmet Kitchen",
+      "Home Office",
+      "Entertainment Room",
+      "Central Air Conditioning",
+      "Solar + Generator Power",
+      "CCTV Surveillance",
+      "Landscaped Garden",
+      "Swimming Pool",
+      "2 Staff Quarters",
+      "2-Car Garage"
+    ],
     status: "For Rent",
     propertyType: "Luxury Homes",
     featured: true
@@ -816,6 +1124,22 @@ export const properties = [
     bathrooms: 2,
     area: "270 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/u1.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Quality 3-bedroom home in the developing Ogbodjo area. This property offers modern construction with spacious rooms, good finishes, and practical design. While Ogbodjo is still emerging, it provides affordable homeownership in Greater Accra with improving infrastructure and road access. The home features two bathrooms, a functional kitchen, and adequate compound space. An excellent opportunity for buyers seeking value in a growing neighborhood with capital appreciation potential.",
+    amenities: [
+      "Modern Construction",
+      "3 Spacious Bedrooms",
+      "2 Bathrooms",
+      "Modern Kitchen",
+      "Living/Dining Area",
+      "Guest Washroom",
+      "Tiled Floors",
+      "Water Storage",
+      "Security Fence",
+      "Parking Space",
+      "Front Porch",
+      "Room for Extension"
+    ],
     status: "For Sale",
     propertyType: "Luxury Homes",
     featured: false
@@ -829,6 +1153,22 @@ export const properties = [
     bathrooms: 2,
     area: "575 sq m",
     image: "https://raw.githubusercontent.com/Webeddies/Properties/refs/heads/main/t26.jfif",
+    additionalImages: ["", "", "", "", ""],
+    description: "Spacious 2-bedroom apartment on generous land in Pokuase. This rental property offers more space than typical apartments, with a large compound perfect for outdoor activities or gardening. The location benefits from the new Pokuase Interchange, significantly improving access to central Accra. The apartment features both bedrooms en-suite, a modern kitchen, and comfortable living spaces. Ideal for families who want suburban space at an affordable rental rate, or professionals seeking a home office setup.",
+    amenities: [
+      "Large Compound (575 sqm)",
+      "Both Bedrooms En-suite",
+      "Modern Kitchen",
+      "Spacious Living Area",
+      "Guest Washroom",
+      "Tiled Throughout",
+      "Water Storage",
+      "Generator Provision",
+      "Parking for Multiple Cars",
+      "Garden Space",
+      "Security Fence",
+      "Improved Road Access"
+    ],
     status: "For Rent",
     propertyType: "Apartments",
     featured: false
@@ -1425,7 +1765,7 @@ export const propertyCategories = [
   {
     id: 1,
     name: "Apartments",
-     
+
     description: "Modern apartments in prime locations",
     count: 16,
     types: ["Apartments"]
@@ -1433,15 +1773,15 @@ export const propertyCategories = [
   {
     id: 2,
     name: "Houses",
-     
+
     description: "Family homes and luxury estates",
     count: 31,
-    types: ["Luxury Homes", "Private Homes"]  
+    types: ["Luxury Homes", "Private Homes"]
   },
   {
     id: 3,
     name: "Commercial",
-     
+
     description: "Office spaces and retail properties",
     count: 16,
     types: ["Commercial"]
@@ -1449,7 +1789,7 @@ export const propertyCategories = [
   {
     id: 4,
     name: "Lands",
-     
+
     description: "Development plots and agricultural land",
     count: 0,
     types: ["Lands"]
@@ -1457,7 +1797,7 @@ export const propertyCategories = [
   {
     id: 5,
     name: "Short Stays",
-    
+
     description: "Vacation rentals and short-term stays",
     count: 8,
     types: ["Short Stays"]
