@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 
                 
                 <a
-                  href="https://wa.me/233555198595"
+                  href="https://wa.me/233504923755"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
@@ -114,8 +114,8 @@ const Footer: React.FC = () => {
                   <div className="p-1 bg-[#B8960F]/20 rounded">
                     <Phone size={16} className="text-[#B8960F]" />
                   </div>
-                  <a href="tel:+233555198595" className="text-gray-300 hover:text-[#B8960F] transition-all duration-300 hover:translate-x-1 cursor-pointer text-sm">
-                    +233 (0) 555 198 595
+                  <a href="tel:+233504923755" className="text-gray-300 hover:text-[#B8960F] transition-all duration-300 hover:translate-x-1 cursor-pointer text-sm">
+                    +233 (0) 504 923 755
                   </a>
                 </div>
 

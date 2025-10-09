@@ -362,7 +362,7 @@ const Contact: React.FC = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/233555198595"
+                href="https://wa.me/233504923755"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-16 h-16 rounded-full transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
