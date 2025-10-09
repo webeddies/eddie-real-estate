@@ -295,7 +295,7 @@ const Contact: React.FC = () => {
                     <div>
                       <h4 className="font-semibold mb-2" style={{ color: '#2C3E50' }}>Phone Number</h4>
                       <p className="text-gray-600 font-light">+233 (0) 504 923 755</p>
-                      <p className="text-gray-600 font-light">+233 (0) 204 313 728</p>
+                      <p className="text-gray-600 font-light">+233 (0) 204 555 728</p>
                     </div>
                   </div>
 
