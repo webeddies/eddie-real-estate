@@ -171,7 +171,7 @@ const Contact: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-4 border-2 focus:outline-none focus:border-transparent transition-all duration-300 text-gray-700 font-light"
-                      placeholder="+233 (0) 555 198 595"
+                      placeholder="+233 (0) 504 923 755"
                       style={{
                         borderColor: formData.phone ? '#B8960F' : '#2C3E50',
                         borderRadius: '0px'
@@ -294,7 +294,7 @@ const Contact: React.FC = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2" style={{ color: '#2C3E50' }}>Phone Number</h4>
-                      <p className="text-gray-600 font-light">+233 (0) 555 198 595</p>
+                      <p className="text-gray-600 font-light">+233 (0) 504 923 755</p>
                       <p className="text-gray-600 font-light">+233 (0) 204 313 728</p>
                     </div>
                   </div>
